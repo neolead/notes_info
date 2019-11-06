@@ -1,0 +1,447 @@
+DNS
+
+nslookup
+>set type=a
+>server ns1.google.com
+>google.com
+
+Enumeration
+dig sub.domain.name PTR
+dig +short domain.name
+	-return ip address of server listed for target domain
+	--very useful for pipping to other commands, implementing in scripts
+whois domain.name
+host -a domain.name
+	-return all records for a domain querying against host-configured primary DNS server
+host -t ns domain.name
+	-Enumerate Name Server(NS) for domain
+dnsenum domain.name
+DNSSEC Enumeration
+dig +multi +dnssec A domain.name
+dig +dnssec  @ns1.domain.name sub.domain.name
+dig +short NSEC sub.domain.name
+dig +short NSEC api.nasa.gov |  awk '{print $1;}' | sed -e 's/\.$//'
+for i in `cat FULL` ;do echo "IP$i";nslookup $i|grep 'name ='|sed 's/.*name = /,/g'|sed 's/\.$//g';done| tr -d '\n' | awk '{gsub("IP","\n"); print}'
+	--nslookup to csv
+	
+	
+	OSINT
+	
+Passive Enumeration:
+
+Certificate Transparency
+	Under Certificate Transparency(CT), a Certificate Authority(CA) will have to publish all SSL/TLS certificates they issue in a public log
+		--known certificate transparency logs:
+			https://www.certificate-transparency.org/known-logs
+	Certificate Transparency logs are append only
+		--no deletion once subdomain is added
+	SSL/TLS certificates generally contain domain names, sub-domain names and email addresses
+	--enumerates internal domains
+	--may provide insight into company/division email address naming schemas
+	CT Logs search engines:
+		https://crt.sh/
+			https://crt.sh/atom?q=%target.dom
+				--rss query result display
+			#!/bin/sh
+			query="SELECT ci.NAME_VALUE NAME_VALUE FROM certificate_identity ci WHERE ci.NAME_TYPE = 'dNSName' AND reverse(lower(ci.NAME_VALUE)) LIKE reverse(lower('%.$1'));"
+			(echo $1; echo $query | psql -t -h crt.sh -p 5432 -U guest certwatch | sed -e 's:^ *::g' -e 's:^*\.::g' -e '/^$/d' | sed -e 's:*.::g';) | sort -u
+				--shell script for query crt.sh postgres database
+		https://censys.io/
+		https://censys.io/api
+		https://developers.facebook.com/tools/ct/
+		https://google.com/transparencyreport/https/ct/
+	openssl s_client -connect google.com:443 -ct -CApath /etc/ssl/certs/
+		--verify Certificate Transparency is being used on an SSL connection
+		--see SCTs provided over a connection
+	findomain
+		https://github.com/Edu4rdSHL/findomain
+		https://github.com/Edu4rdSHL/findomain/tree/master/bin/windows
+		https://github.com/Edu4rdSHL/findomain/tree/master/bin/osx
+		git clone https://github.com/Edu4rdSHL/findomain.git
+		wget https://github.com/Edu4rdSHL/findomain/releases/latest/download/findomain-linux	
+		findomain -i -f infile.ext -o csv -t domain.name
+		findomain -a -i -f infile.ext -o json -t domain.name
+		findomain -i -o txt -t domain.name
+
+Dorks
+	Google
+		site:*.target.dom -www
+	Bing
+		site:target.dom -www
+
+	
+Archival (DNS Aggregators, public datasets)
+	DNS Dumpster
+	--https://dnsdumpster.com
+	https://github.com/zeropwn/dnsdmpstr.git
+		python3 ddump.py -u target.dom --all
+			OR ipython/Jupyter Notebook
+		import dnsdmpstr
+		dnsdump = dnsdumpstr()
+			#return complete result set
+		print(json.dumps(dnsdump.dump("target.dom"), indent=1))
+			#return partial result sets
+		print(dnsdump.hostsearch(target))
+		print(dnsdump.reversedns(target))
+		print(dnsdump.dnslookup(target))
+		print(dnsdump.pagelinks(target))
+		print(dnsdump.httpheaders(target))
+	VirusTotal
+		https://virustotal.org
+	Sonar
+		https://scans.io
+	Censys.io
+		https://www.censys.io/
+	Certificate Transparency
+		https://www.certificate-transparency.org/
+	CZDS
+		https://czds.icann.org/
+	ARIN
+		https://www.arin.net/
+	CAIDA PFX2AS ipv4
+		http://data.caida.org/datasets/routing/routeviews-prefix2as
+	CAIDA PFX2AS ipv6
+		http://data.caida.org/datasets/routing/routeviews6-prefix2as
+	US Government
+		https://raw.githubusercontent.com/GSA/data/gh-pages/dotgov-domains/current-full.csv
+	UK Government
+		https://www.gov.uk/government/publications/list-of-gov-uk-domain-names
+	RIR Delegations
+		http://ftp.arin.net/pub/stats/
+	Premium Drops
+		http://premiumdrops.com/
+	https://wwws.io/
+	https://whoisxmlapi.com/
+		https://github.com/fathom6/inetdata
+
+Archival + CT logs:
+	sudomy -s Shodan,VirusTotal,Censys,Certspotter,BinaryEdge,Hackertarget,Threatminer,CrtSH,DnsDB,BufferOver,Findsubdomains,Threatcrowd,Dnsdumpster,Riddler,Entrust,Webarchive,SecurityTrails -d target.dom
+
+Forward DNS
+	https://scans.io/study/sonar.fdns_v2
+		--Rapid7 Forward DNS dataset
+	zcat dataset | jq -r '.name | test("\\.target\\.dom$")'
+	 curl -silent https://scans.io/data/rapid7/sonar.fdns_v2/20170417-fdns.json.gz | pigz -dc | grep “.target.dom” | jq
+
+ASN Discovery
+	identify netblocks of target domain
+	find ASN given IP ADDR
+		https://asn.cymru.com/cgi-bin/whois.cgi
+		curl -s http://ip-api.com/json/192.30.253.113 |  jq -r .as
+	find ASN given domain name
+		http://bgp.he.net/
+	find all the IP ranges that belong to an ASN
+		whois -h target.dom  -- '-i origin AS36459' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
+		nmap --script targets-asn --script-args targets-asn.asn=17012 > paypal.netblocks.txt
+		
+SAN (Subject Alternative Name) Discovery
+	extension to X.509 specification that allows to specify additional host names for a single SSL certificate
+	sed -ne 's/^\( *\)Subject:/\1/p;/X509v3 Subject Alternative Name/{ N;s/^.*\n//;:a;s/^\( *\)\(.*\), /\1\2\n\1/;ta;p;q; }' < <( openssl x509 -noout -text -in <( openssl s_client -ign_eof 2>/dev/null <<<$'HEAD / HTTP/1.0\r\n\r' -connect target.dom:443 ) )
+		
+CloudFlare
+	When you "Add site" in cloudflare account, cloudflare performs DNS enumeration & finds sub-domains belonging to submitted domain
+	1.) https://www.cloudflare.com/login
+	2.) https://www.cloudflare.com/a/add-site
+	3.) submit target domain
+	4.) check response from cloudflare
+	https://github.com/appsecco/bugcrowd-levelup-subdomain-enumeration/blob/master/cloudflare_enum.py
+	
+	Automated Tools
+amass --passive -d TARGET-DOMAIN
+
+		
+Active Enumeration:
+
+	Zone-transfer
+	DNS transaction where a DNS server passes a copy of full or part of it's zone file to another DNS server
+host -l domain.name ns1.namesever.dom
+perl fierce.pl -dns domain.name
+host -t axfr domain.name ns1.namesever.dom
+dig axfr @ns1.namesever.dom domain.name
+dig +multi axfr @ns1.namesever.dom domain.name
+dnswalk -r -d example.com
+dnsbulkwalk
+nmap --script dns-zone-transfer.nse --script-args dns-zone-transfer.domain=target.dom target.dom -p 53,80,443
+dnsrecon -d domain.name -t axfr
+
+	Zone Walking
+ldns-walk
+	sudo apt-get install ldnsutils
+ldns-walk @nameserver domain
+ldns-walk @ns2.dnsux.dom dnsux.dom
+ldns-nsec3-hash -t 3 -s ABCDEF example.com | sed -e 's/\.$//'
+nsec3walker
+	wget https://dnscurve.org/nsec3walker-201-1223.tar.gz
+	tar -xzf nsec3walker-20101223.tar.gz
+	cd nsec3walker-20101223
+	make
+./collect dnsux.dom > dnsux.com.collect
+./unhash < dnsux.dom.collect > dnsux.dom.unhash
+cat dnsux.dom.unhash | grep "dnsux" | awk '{print $2;}'
+nsec3map
+	https://github.com/anonion0/nsec3map
+
+	Subdomain Brute forcing
+perl fierce.pl -dns google.com hosts.txt
+sublist3r -b -d google.com
+python subbrute.py google.com -o google.names
+python subbrute.py -t domainslist.txt
+dnsmap example.com -w /usr/share/wordlists/dnsmap.txt
+dnsmap-bulk.sh domains.txt
+dnsrecon -d example.com -D /usr/share/wordlists/dnsmap.txt -t std --xml dnsrecon.xml
+wfuzz -c -z file,/path/to/SecLists/Discovery/DNS/subdomains-top1mil-20000.txt -Z -u http://FUZZ.site.domain | grep -v '0 L'
+amass -active -brute -o hosts.txt -d domain.name
+python altdns.py -i target.domains -o data_output -w target.cewl.words -r -s results_output.txt
+sudomy -nP -d target.dom -b /path/to/word.list
+
+	SPF (Sender Policy Framework) Records
+	https://github.com/0xbharath/assets-from-spf
+		--script to extract netblocks & domain names from SPF records
+	--indicate to recieving mail exchanges which hosts are authorized to send mail for a given domain
+	--defined using the TXT record type
+	--SPF record type deprecated
+	dig +short TXT target.dom | grep spf
+	--sometimes reveal information about internal netblocks and sub-domains of an organization
+		--common for fintech domains to have internal netblocks listed in their SPF record
+
+	HTTP Header Subdomain Enumeration
+CSP may create whitelist of trusted source domains
+	Relevent Headers:
+		Content-Security-Policy
+		X-Content-Security-Policy
+		X-Webkit-CSP
+		CSP
+	curl --head -s -L https://www.target.dom | egrep -i 'Content-Security|CSP'
+	csp_parser.py
+		https://github.com/0xbharath/domains-from-csp
+		--extracts domains from Content-Security-Policy header and check if the domain has a valid A record
+	python csp_parser.py https://www.target.dom
+
+	Domain Flyovers
+aquatone
+cat hosts.txt | aquatone -ports 80,443,3000,3001
+cat hosts.txt | aquatone -ports large
+cat scan.xml | aquatone -nmap
+
+	OSINT Discovery
+waybackurls
+	
+	Combined attacks
+sublist3r -d google.com
+Amass
+	https://github.com/OWASP/Amass.git
+	amass -d domain.name
+		--basic use, includes reverse DNS lookups and name alterations
+	amass -src -ip -brute -min-for-recursive 3 -d domain.name
+		---https://github.com/OWASP/Amass/blob/master/doc/user_guide.md
+massdns
+	https://github.com/blechschmidt/massdns
+	massdns -r resolvers.txt -t AAAA -w results.txt domains.txt
+		--resolve AAAA records
+	subbrute.py names.txt target.dom | ./bin/massdns -r resolvers.txt -t A -a -o -w results.txt -
+Sudomy
+	export GOPATH=$HOME/go
+	export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+	go get -u github.com/tomnomnom/httprobe
+	go get -u github.com/OJ/gobuster
+	git clone --recursive https://github.com/screetsec/Sudomy.git
+	sudomy -a -d target.dom
+	
+
+	
+	Subdomain wordlist mangling
+altdns
+	https://github.com/infosec-au/altdns
+	python altdns.py -i subdomains.txt -o data_output -w words.txt -r -s results_output.txt
+
+
+dnsrecon
+dnsmap
+dnsmap-bulk.sh
+ffuf
+subfinder
+subjack
+inception
+
+
+Web databases
+https://dnsdumpster.com
+https://shodan.io
+https://securitytrails.com/
+https://www.robtex.com/
+https://www.robtex.com/dns/
+https://securitytrails.com/list/ip/$IP
+https://www.dnsstuff.com/
+https://www.netcraft.com/
+https://data.iana.org/TLD/tlds-alpha-by-domain.txt
+http://ipv4info.com/
+https://findsubdomains.com/
+https://sslmate.com/certspotter
+https://censys.io
+https://threatminer.org
+http://dns.bufferover.run
+https://hackertarget.com
+https://www.entrust.com/ct-search/
+https://www.threatcrowd.org
+https://riddler.io
+https://www.binaryedge.io
+
+Block Lists
+https://rbls.org/
+https://multirbl.valli.org/lookup/
+
+
+
+Web Archives
+https://web.archive.org/
+https://archive.is/
+http://www.cachedpages.com/
+http://cachedview.com/
+
+
+DNS Blacklists
+https://www.virustotal.com/#url
+https://zeltser.com/lookup-malicious-websites/
+https://raw.githubusercontent.com/zbetcheckin/DNSBLs/master/active_dnsbls.txt
+https://www.google.com/transparencyreport/safebrowsing/diagnostic/
+https://sitecheck.sucuri.net/scanner/
+https://www.threatlog.com/
+https://threatminer.com/
+https://www.trustedsource.org/
+
+
+DNSSEC:
+	-adds cryptographic signatures to DNS records checked to verify that a record came from the correct DNS server
+		--signatures stored alongside common record types
+	-implements 2 additional record types: DNSKEY and DS
+	--DNSSEC zones are assigned a set of zone signing keys (ZSK)
+		--private and public ZSK
+		--adds additional security layer: DNSSEC zones contain a second DNSKEY records containing a key signing key (KSK), which verifies the authenticity of the public ZSK
+	DS record is used to verify the authenticity of child zones** of DNSSEC zones
+		--DS key record on a parent zone contains a hash of the KSK in a child zone
+		>DNSSEC resolver can therefore verify the authenticity of the child zone by hashing its KSK record
+			--varifies by comparing against parent zone’s DS record
+	DNSSEC - Authenticated Denial of Existence(RFC 7129)
+		-In DNS, when client queries for a non-existent domain, the server must deny the existence of that domain. More difficult with DNSSEC due to cryptographic signing.
+			Problems with Authenticated Denial of Existence(DNSSEC):
+				-NXDOMAIN responses are generic, attackers can spoof the responses
+				-Signing responses on the fly would mean a performance and security problem
+				-Pre-signing every possible NXDOMAIN record is not possible, infinite possibilities
+		NSEC (NextSECure)
+			-Zone entries are sorted alphabetically, and the NSEC records point to the record after the one you looked up
+		NSEC3
+			-NSEC3 provides a signed gap of hashes of domain names
+				--Returning hashes was intended to prevent zone enumeration(or make it expensive)
+			ldns-nsec3-hash -t 3 -s ABCDEF target.dom
+			
+DNS Attacks:
+	DNS spoofing/cache poisoning
+	DNS tunnelling
+	DNS hijacking/Subdomain Takeover
+	NXDOMAIN attack
+		--DoS attack against DNS Zone
+		-DNS flood attack where an attacker inundates a DNS server with requests, asking for records that don’t exist
+			--auto-generate unique subdomains for each request
+			--alternatively, target a recursive resolver with the goal of filling the resolver’s cache with junk requests
+	Phantom domain attack
+		--DoS attack agaisnt DNS Resolver
+		-attack configuring multitude of of ‘phantom’ domain servers which either respond to requests very slowly or not at all
+			--resolver is then hit with a flood of requests to these domains and the resolver gets tied up waiting for responses
+	Random subdomain attack
+	Domain lock-up attack
+	Botnet-based CPE attack
+
+
+DNS REQ/RES FORWARDING:
+	SOCAT
+socat udp4-recvfrom:53,reuseaddr,fork udp4-sendto:111.11.1.11; echo -ne
+	--forward dns requests recieved by host to target
+		--e.g. forwarding to Cobalt Strike DNS beacons or and DNS C2 Exfiltration applicaiton
+#server
+socat -t0 -T0 tcp-listen:6667,reuseaddr,fork UDP:localhost:53
+ssh usr@redirect.dom -R 6667:localhost:6667
+#redirecting host
+socat -t0 -T0 udp4-recvfrom:53,reuseaddr,fork tcp:localhost:6667
+	--DNS redirect behind NAT
+	IPTABLES
+iptables -I INPUT -p udp -m udp --dport 53 -j ACCEPT
+iptables -t nat -A PREROUTING -p udp --dport 53 -j DNAT --to-destination <IP-GOES-HERE>:53
+iptables -t nat -A POSTROUTING -j MASQUERADE
+iptables -I FORWARD -j ACCEPT
+iptables -P FORWARD ACCEPT
+sysctl net.ipv4.ip_forward=1
+
+
+Appendix:
+
+DNS RECORDS TYPES:
+A Records - Maps an IP Address to a hostname.For e.g. 74.125.236.80 for google.com.
+AAAA Records - Similar to the A record, but allowed to point the domain to an Ipv6 address.
+AFSDB Records - Location of AFS cell database server or DCE cell’s authenticated server.
+ATMA Records - Maps domain name to ATM address.
+CAA Records - Authorize specific third party vendors to issue SSL certificates on behalf of domains. Requires CAs to check for the presence of a CAA record and, if one is found, verify that they are authorized prior to issuing certificates for this domain. If a CAA record is not present the CA can issue a certificate for the domain.
+CERT Records - CERT resource records are used for storing certificates in DNS. CERT records store and provide information that involves verifying the authenticity of the sending and receiving parties.
+CNAME Records - (Canonical NAME) gives an alias of one name to another; records map an alias name to a Fully Qualified Domain Name (FQDN).
+DNAME Records - DNAME records make a CNAME record for every subdomain of a domain and point it to another.
+HINFO Records - Identifies host hardware and OS type.
+ISDN Records - Maps host name to ISDN address(phone number).
+NAPTR Records - Map telephone numbers and email addresses for VoIP users to SIP servers via SRV records to initiate calls.
+NS Records - Delegates a given zone to use the given authoritative nameserver configured to respond to queries against a particular domain name. For e.g. ns1.google.com is an authoritative nameserver for google.com
+MX Records -(Mail Exchanger) directs email to a particular mail server. Like a CNAME, MX Entries must point to a domain and never point directly to an IP address.
+	MB - Associates host with specified mailbox [experimnetal]
+	MG - Associates host name with mail group [experimental]
+	MINFO - Specifies mailbox name responsible for mail group [experimental]
+	MR - Specifies mailbox name that is proper rename of other mailbox [experimental]
+PTR Records - Maps address to a host name for reverse lookup.
+SOA Records - (Start of Authority) record can show the primary name server for the domain name, the serial number (when the last revision was made to the DNS configuration for the zone if it's shown in the correctly specified date format), and other pertinent information relating to how the zone is run by the administrator.
+	RP - (Responsible person) is an email address of whom to contact in the event of a misconfiguration or some other issue relating to the DNS zone. Contained within SOA Record.
+	RT - Specifies intermediate host that routes packets to destination host
+		X.25 - Maps host name to X.121 address (X.25 networks)
+TXT Records - Originally intended to consist of arbitrarily human readable text in a record. Are dynamic and can be used for several purposes.
+	SPF - (Sender Policy Framework) records; records used by mail systems to help identify if an email is coming from a trusted source, helping filter out spam or messages pretending to be from some domain(spoofing).
+		---https://www.open-spf.net/
+	DKIM - (DomainKeys) used to verify that email directed from a trusted source.
+		---https://www.dkim.org/
+SRV Records - (Service) record points one domain to another domain name using a specific destination port. SRV records allow specific services, such as VOIP or IM, to be be directed to a separate location. Commonly SIP and XMPP (chat) servers
+WINS Records - Allows lookup of host portion of domain name through WINS server.
+WINS-R Records - Reverses lookup through WINS server.
+WKS Records - Describes services provided by specific protocol on specific port.
+
+DNSSEC Record Types:
+DNSKEY Records - Cryptographic method for declaring configuration for security in DNSSEC.
+DS Records - Contains a hash of a DNSKEY record for validation; hash type DNSSEC(NSEC3) within TXT record
+NSEC - (NextSECure) for explicit denial-of-existence of a DNS record
+NSEC3 - for explicit denial-of-existence of a DNS record
+RRSIG - Contains a cryptographic signature
+
+Glossary
+Zone File:
+    Where all the DNS records are stored for a domain.
+Host Record:
+    Domain or subdomain used. The @ symbol is used to indicate the root domain itself.
+Points to:
+    Destination server that the domain or subdomain is sending the traffic to.
+TTL:
+    'Time to live' value indicates amount of time a record is cached by DNS Server. Sefault (and lowest accepted) value is 14400 seconds (4 hours).
+Action:
+    Allows modification or removal f existing records.
+Weight:
+    Priority, controls the order in which multiple records are used. Records are grouped with other records that have the same Priority value. As with MX Entries, lower numbers are used before higher numbers.
+		--Weight are determined by preference numbers in the rance 0-65535
+
+	
+Regional Authorities and in-addr.arpa
+	African Network Information Center (AfriNIC)
+    American Registry for Internet Numbers (ARIN)
+    Asia-Pacific Network Information Center (APNIC)
+    Latin America and Caribbean Network Information Center (LACNIC)
+    NCC Reseaux IP Europeens Network Coordination Center (RIPE)
+
+	
+Reference/Further reading:
+https://www.certificate-transparency.org/
+https://public-dns.info/nameservers.txt
+https://public-dns.info/nameservers.csv
+https://public-dns.info/nameservers-all.csv
+https://public-dns.info/nameservers-all.txt
+https://github.com/pentest-io/commonspeak/archive/master.zip
