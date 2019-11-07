@@ -50,8 +50,11 @@ while read p; do
   fi
   set -- "$p" 
   IFS=":"; declare -a Array=($*)  
-  (curl --connect-timeout 20 -m 60 -sSf -U \"${Array[0]}:${Array[1]}\" --socks5 $pr:1080 2ip.ru > /dev/null 2>&1 || status=$?
-  if [ "$?" != "7" ]; then 
+  (curl --connect-timeout 20 -m 60 -sSf -U \"${Array[0]}:${Array[1]}\" --socks5 $pr:1080 2ip.ru > /dev/null 2>&1 ;status=$?
+  if [ $status -ne 0 ]; then 
+    echo $p Dead
+  else
+    echo $p Alive
     echo "${Array[0]}:${Array[1]}"  >>$out
   fi)&
 done < $fn
