@@ -50,24 +50,21 @@ while read p; do
   fi
   set -- "$p" 
   IFS=":"; declare -a Array=($*)  
-  (curl --connect-timeout 20 -m 60 -sSf -U \"${Array[0]}:${Array[1]}\" --socks5 $pr:1080 2ip.ru > /dev/null 2>&1 ;status=$?
-  if [ $status -ne 0 ]; then 
-    echo $p Dead
-  else
-    echo $p Alive
-    echo "${Array[0]}:${Array[1]}"  >>$out
-  fi)&
+  
+  (curl --connect-timeout 20 -m 60 -sf -U ${Array[0]}:${Array[1]} --socks5 $pr:1080 2ip.ru >/dev/null && (echo +Valid:"${Array[0]}:${Array[1]}" && echo "${Array[0]}:${Array[1]}"  >>$out) || echo -Dead:$p )&
 done < $fn
 
-while [ true ]; do
-  if [ `ps|grep curl|wc -l` -ge "2"  ]; then
-     echo We sleep 5 sec. Current proc running `ps|grep curl|wc -l` Limit : $threads
-     sleep 5
-  else
-     echo We continue, Current proc running `ps|grep curl|wc -l`
-     cp work.txt work_all.txt
-     cat work_all.txt|sort|uniq >work.txt
-     echo total work:`wc -l work_all.txt` clean:`wc -l work.txt`
-     break
-  fi
 
+while [ true ]; do
+  if [ `ps|grep curl|wc -l` -ge 2  ]
+  then 
+    echo We sleep 5 sec. Current proc running `ps|grep curl|wc -l` Limit : $threads && sleep 5
+  else
+    echo We continue, Current proc running `ps|grep curl|wc -l`
+    sleep 3
+    cp work.txt work_all.txt
+    cat work_all.txt|sort|uniq >work.txt
+    echo total work:`wc -l work_all.txt` clean:`wc -l work.txt`
+    break
+  fi
+done
