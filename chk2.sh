@@ -51,7 +51,7 @@ while read p; do
   set -- "$p" 
   IFS=":"; declare -a Array=($*)  
   
-  (curl --connect-timeout 20 -m 60 -sf -U ${Array[0]}:${Array[1]} --socks5 $pr:1080 2ip.ru >/dev/null && (echo +Valid:"${Array[0]}:${Array[1]}" && echo "${Array[0]}:${Array[1]}"  >>$out) || echo -Dead:$p )&
+  (curl --connect-timeout 20 -m 60 -sf -U ${Array[0]}:${Array[1]} --socks5 $pr:1080 2ip.ru >/dev/null && (echo +Valid:"${Array[0]}:${Array[1]}" && echo "${Array[0]}:${Array[1]}"  >>$out) )&
 done < $fn
 
 
