@@ -56,7 +56,7 @@ done < $fn
 
 
 while [ true ]; do
-  if [ `ps|grep curl|wc -l` -ge 2  ]
+  if [ `ps|grep curl|wc -l` -ge 1  ]
   then 
     echo We sleep 5 sec. Current proc running `ps|grep curl|wc -l` Limit : $threads && sleep 5
   else
