@@ -1,3 +1,8 @@
+#Nordvpn account check tool v1.2 Created by matrix
+#
+#Run like bash chk2.sh filename.txt filename.txt must be in login:password format 
+#Working proxy accounts will be stored into work.txt Multithreaded tool. default 190 threads, you can change inside.
+
 if [[ $# -eq 0 ]] ; then
     echo 'Nordvpn check tool v1.2'
     echo 'Created by matrix'
