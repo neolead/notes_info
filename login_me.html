@@ -1,0 +1,6207 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+		
+		
+	
+	
+		
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+	<!DOCTYPE html>
+<html class="ltr no-js no-svg no-fonts" lang="cs-CZ">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="msapplication-tap-highlight" content="no" />
+		
+		
+			
+		
+					<title>Můj T-Mobile - T-Mobile.cz</title>
+<script id="gdpr-script" type="text/javascript">
+var currentDelegate;
+var currentDomain = window.location.hostname;
+var domainPrefix = '';
+var cookieTypesName = 'cocos';
+var cookieRecipientsName = 'corec';
+
+if(currentDomain.indexOf("www") > -1) {
+	currentDelegate = 'https://' + currentDomain.replace('www','consent') + '/dialog';
+	if(currentDomain.indexOf("pwww") > -1) {
+		currentDelegate = 'https://' + currentDomain.replace('pwww','tconsent') + '/dialog';
+		cookieTypesName = 'tcocos';
+		cookieRecipientsName = 'tcorec';
+	}
+	if(currentDomain.indexOf("twww") > -1) {
+		currentDelegate = 'https://' + currentDomain.replace('twww','tconsent') + '/dialog';
+		cookieTypesName = 'tcocos';
+		cookieRecipientsName = 'tcorec';
+	}
+	if(currentDomain.indexOf("t2www") > -1) {
+		currentDelegate = 'https://' + currentDomain.replace('t2www','tconsent') + '/dialog';
+		cookieTypesName = 'tcocos';
+		cookieRecipientsName = 'tcorec';
+	}
+	if(currentDomain.indexOf("t3www") > -1) {
+		currentDelegate = 'https://' + currentDomain.replace('t3www','tconsent') + '/dialog';
+		cookieTypesName = 'tcocos';
+		cookieRecipientsName = 'tcorec';
+	}
+} else {
+	if(currentDomain.substring(0,1) == 't' && currentDomain != 't-plm.cz') {
+		domainPrefix = 'tconsent.';
+		cookieTypesName = 'tcocos';
+		cookieRecipientsName = 'tcorec';
+	} else {
+		domainPrefix = 'consent.';
+	}
+	currentDelegate = 'https://' + domainPrefix + currentDomain + '/dialog';
+
+	if(currentDomain.indexOf('t-mobile.cz') > -1) {
+		if(currentDomain.substring(0,1) == 't') {
+			domainPrefix = 'tconsent.';
+			cookieTypesName = 'tcocos';
+			cookieRecipientsName = 'tcorec';
+		} else {
+			domainPrefix = 'consent.';
+		}
+
+		currentDelegate = 'https://' + domainPrefix + 't-mobile.cz/dialog';
+	}
+
+	if(currentDomain == 'localhost') {
+		currentDelegate = 'https://tconsent.t-mobile.cz/dialog';
+		cookieTypesName = 'tcocos';
+		cookieRecipientsName = 'tcorec';
+	}
+}
+//console.log('currentDelegate: ');
+//console.log(currentDelegate);
+
+var gcConfig = {
+	//cocosDelegate: 'https://tconsent.t-mobile.cz/dialog'
+	cocosDelegate: currentDelegate
+};
+		var ifrm;
+var bodyElement;
+var styleString=".gdpr-dialog-active { overflow: hidden; }";
+var currentConsent=null;
+window.dataLayer=window.dataLayer||[];
+function coComponent(){var a=document.head||document.getElementsByTagName("head")[0];
+bodyElement=document.body||document.getElementsByTagName("body")[0];
+var b=document.createElement("style");
+a.appendChild(b);
+b.type="text/css";
+if(b.styleSheet){b.styleSheet.cssText=styleString
+}else{b.appendChild(document.createTextNode(styleString))
+}ifrm=document.createElement("iframe");
+ifrm.setAttribute("src",gcConfig.cocosDelegate);
+ifrm.style.width="100%";
+ifrm.style.height="100%";
+ifrm.style.position="fixed";
+ifrm.style.display="none";
+ifrm.style.top="0";
+ifrm.style.left="0";
+ifrm.style.zIndex="99999";
+ifrm.classList.add("gdpr-iframe");
+bodyElement.prepend(ifrm)
+}function deleteCookie(a){document.cookie=a+"=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;"
+}window.addEventListener("message",receiveMessage,false);
+function receiveMessage(a){if(a.data.evName=="openIframe"){openIframe()
+}if(a.data.evName=="closeIframe"){closeIframe()
+}if(a.data.evName=="closeIframeNA"){closeIframeNA()
+}if(a.data.evName=="pushToDL"){if(a.data.dataLayer.toDelete){currentConsent=a.data.dataLayer.consent;
+a.data.dataLayer.toDelete.forEach(function(b){deleteCookie(b)
+})
+}else{window.dataLayer.push(a.data.dataLayer)
+}}}function getCookieByName(b){var a=document.cookie.match(new RegExp("(^| )"+b+"=([^;]+)"));
+var c;
+if(a){c=unescape(a[2])
+}else{c=null
+}return c
+}function isScriptAllowed(b){console.log("function isScriptAllowed() is obsolete - change to isScriptAllowedRec()");
+var a=false;
+var c=JSON.parse(getCookieByName(cookieTypesName));
+if(c!=null){Object.keys(c).forEach(function(d){if(d==b){a=this[d]
+}},c)
+}return a
+}function isScriptAllowedRec(b){var a=false;
+var c=JSON.parse(getCookieByName(cookieRecipientsName));
+if(c!=null){Object.keys(c).forEach(function(d){if(d==b){a=this[d]
+}},c)
+}return a
+}if(typeof logInited==="undefined"){var logInited=false
+}function openIframe(){const c=new URLSearchParams(window.location.search);
+if(!c.has("dialog")){ifrm.classList.remove("hide");
+ifrm.style.display="block";
+bodyElement.classList.add("gdpr-dialog-active");
+if(logInited==false){var b={action:"log",event:"dialogPopup",eventOpt:"auto",currentURL:document.URL};
+ifrm.contentWindow.postMessage(b,"*");
+logInited=true
+}var a={action:"initLog",event:"setCurrentUrl",currentURL:document.URL};
+ifrm.contentWindow.postMessage(a,"*")
+}}function openIframeManual(){ifrm.classList.remove("hide");
+ifrm.style.display="block";
+bodyElement.classList.add("gdpr-dialog-active");
+if(logInited==false){var b={action:"log",event:"dialogPopup",eventOpt:"manual",currentURL:document.URL};
+ifrm.contentWindow.postMessage(b,"*");
+logInited=true
+}var a={action:"initLog",event:"setCurrentUrl",currentURL:document.URL};
+ifrm.contentWindow.postMessage(a,"*")
+}function closeIframe(){ifrm.classList.add("hide");
+ifrm.style.display="none";
+bodyElement.classList.remove("gdpr-dialog-active");
+logInited=false;
+location.reload()
+}function closeIframeNA(){ifrm.classList.add("hide");
+ifrm.style.display="none";
+bodyElement.classList.remove("gdpr-dialog-active");
+logInited=false
+};		
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			coComponent();
+		});
+</script>
+
+
+	<script id="criticaljs" type="text/javascript">
+		/*! EnhanceJS: a progressive enhancement boilerplate. Copyright 2014 @scottjehl, Filament Group, Inc. Licensed MIT */
+(function(i,c){var g=i.setTimeout;
+var f={};
+var l=i.document,b=l.documentElement,k=l.head||l.getElementsByTagName("head")[0],e="fullcss",j="fulljs",h="fonts",a=["enhanced"];
+function d(m,q,s){var o=i.document.createElement("link");
+var p=q||i.document.getElementsByTagName("script")[0];
+var r=i.document.styleSheets;
+o.rel="stylesheet";
+o.href=m;
+o.media="only x";
+p.parentNode.insertBefore(o,p);
+function n(){var u;
+for(var t=0;
+t<r.length;
+t++){if(r[t].href&&r[t].href.indexOf(m)>-1){u=true
+}}if(u){o.media=s||"all"
+}else{g(n)
+}}n();
+return o
+}f.loadCSS=d;
+if(!("querySelector" in l)){return
+}b.className+=" "+a.join(" ");
+i.enhance=f
+}(this));
+var className="no-js",el=document.documentElement;
+if(el.classList){el.classList.remove(className)
+}else{el.className=el.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," ")
+}document.documentElement.className+=" js";	</script>
+
+	<link id="criticalcss" rel="stylesheet" href="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;tmcz-theme&#x2f;css&#x2f;critical&#x2f;critical&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;tmczvcc_WAR_tmcztheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670414802000" />
+
+	<script id="jquery" src="https://static2.t-mobile.cz/shared-libs-theme/js/jquery/jquery-1.11.2.js"></script>
+	<script src="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;tmcz-theme&#x2f;js&#x2f;libs&#x2e;js&#x3f;browserId&#x3d;other&#x26;minifierType&#x3d;js&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670414802000"></script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+		<meta content="Vítejte v samoobsluze Můj T-Mobile a chovejte se tu jako doma. Ať už chcete mrknout na přehled vašich vyúčtování nebo si nastavit novou službu či tarif, spo" lang="cs-CZ" name="description" />
+	
+
+	
+
+	
+		<meta content="můj t-mobile, samoobsluha, přehled vyúčtování, nastavení tarifů" lang="cs-CZ" name="keywords" />
+	
+
+
+
+<link href="https://static2.t-mobile.cz/tmcz-theme/images/favicon.ico" rel="Shortcut Icon" />
+
+
+
+
+
+	<link href="https&#x3a;&#x2f;&#x2f;www&#x2e;t-mobile&#x2e;cz&#x2f;muj-t-mobile" rel="canonical" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	if (window.enhance && typeof window.enhance.loadCSS === 'function') {
+		var jQueryNode = document.getElementById('jquery');
+		enhance.loadCSS('https://static2.t-mobile.cz/tmcz-theme/css/aui.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414802000', jQueryNode);
+	} else {
+			var ss = window.document.createElement('link');
+			ss.type = 'text/css';
+			ss.rel = 'stylesheet';
+			ss.media = 'screen';
+			ss.href = 'https://static2.t-mobile.cz/tmcz-theme/css/aui.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414802000';
+			document.getElementsByTagName('head')[0].appendChild(ss);
+	}
+</script>
+<noscript>
+	<link href="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;tmcz-theme&#x2f;css&#x2f;aui&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;tmczvcc_WAR_tmcztheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670414802000" rel="stylesheet" media="screen" />
+</noscript>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	if (window.enhance && typeof window.enhance.loadCSS === 'function') {
+		var jQueryNode = document.getElementById('jquery');
+		enhance.loadCSS('https://static2.t-mobile.cz/html/css/main.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414802000', jQueryNode);
+	} else {
+			var ss = window.document.createElement('link');
+			ss.type = 'text/css';
+			ss.rel = 'stylesheet';
+			ss.media = 'screen';
+			ss.href = 'https://static2.t-mobile.cz/html/css/main.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414802000';
+			document.getElementsByTagName('head')[0].appendChild(ss);
+	}
+</script>
+<noscript>
+	<link href="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;html&#x2f;css&#x2f;main&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;tmczvcc_WAR_tmcztheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670414802000" rel="stylesheet" media="screen" />
+</noscript>
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	if (window.enhance && typeof window.enhance.loadCSS === 'function') {
+		var jQueryNode = document.getElementById('jquery');
+		enhance.loadCSS('https://static2.t-mobile.cz/tmcz-theme/css/vcc.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414820000', jQueryNode);
+	} else {
+			var ss = window.document.createElement('link');
+			ss.type = 'text/css';
+			ss.rel = 'stylesheet';
+			ss.media = 'screen';
+			ss.href = 'https://static2.t-mobile.cz/tmcz-theme/css/vcc.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414820000';
+			document.getElementsByTagName('head')[0].appendChild(ss);
+	}
+</script>
+<noscript>
+	<link href="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;tmcz-theme&#x2f;css&#x2f;vcc&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;tmczvcc_WAR_tmcztheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670414820000" rel="stylesheet" media="screen" />
+</noscript>
+
+	
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	if (window.enhance && typeof window.enhance.loadCSS === 'function') {
+		var jQueryNode = document.getElementById('jquery');
+		enhance.loadCSS('https://static2.t-mobile.cz/lwe-eshop-portlet/css/vue.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414834000', jQueryNode);
+	} else {
+			var ss = window.document.createElement('link');
+			ss.type = 'text/css';
+			ss.rel = 'stylesheet';
+			ss.media = 'screen';
+			ss.href = 'https://static2.t-mobile.cz/lwe-eshop-portlet/css/vue.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414834000';
+			document.getElementsByTagName('head')[0].appendChild(ss);
+	}
+</script>
+<noscript>
+	<link href="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;lwe-eshop-portlet&#x2f;css&#x2f;vue&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;tmczvcc_WAR_tmcztheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670414834000" rel="stylesheet" media="screen" />
+</noscript>
+
+	
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	if (window.enhance && typeof window.enhance.loadCSS === 'function') {
+		var jQueryNode = document.getElementById('jquery');
+		enhance.loadCSS('https://static2.t-mobile.cz/article2-portlet/css/main.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670444521000', jQueryNode);
+	} else {
+			var ss = window.document.createElement('link');
+			ss.type = 'text/css';
+			ss.rel = 'stylesheet';
+			ss.media = 'screen';
+			ss.href = 'https://static2.t-mobile.cz/article2-portlet/css/main.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670444521000';
+			document.getElementsByTagName('head')[0].appendChild(ss);
+	}
+</script>
+<noscript>
+	<link href="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;article2-portlet&#x2f;css&#x2f;main&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;tmczvcc_WAR_tmcztheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670444521000" rel="stylesheet" media="screen" />
+</noscript>
+
+	
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	if (window.enhance && typeof window.enhance.loadCSS === 'function') {
+		var jQueryNode = document.getElementById('jquery');
+		enhance.loadCSS('https://static2.t-mobile.cz/html/portlet/staging_bar/css/main.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670444054000', jQueryNode);
+	} else {
+			var ss = window.document.createElement('link');
+			ss.type = 'text/css';
+			ss.rel = 'stylesheet';
+			ss.media = 'screen';
+			ss.href = 'https://static2.t-mobile.cz/html/portlet/staging_bar/css/main.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670444054000';
+			document.getElementsByTagName('head')[0].appendChild(ss);
+	}
+</script>
+<noscript>
+	<link href="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;html&#x2f;portlet&#x2f;staging_bar&#x2f;css&#x2f;main&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;tmczvcc_WAR_tmcztheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670444054000" rel="stylesheet" media="screen" />
+</noscript>
+
+	
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	// <![CDATA[
+		var Liferay = {
+			Browser: {
+				acceptsGzip: function() {
+					return true;
+				},
+				getMajorVersion: function() {
+					return 108.0;
+				},
+				getRevision: function() {
+					return "537.36";
+				},
+				getVersion: function() {
+					return "108.0";
+				},
+				isAir: function() {
+					return false;
+				},
+				isChrome: function() {
+					return true;
+				},
+				isFirefox: function() {
+					return false;
+				},
+				isGecko: function() {
+					return true;
+				},
+				isIe: function() {
+					return false;
+				},
+				isIphone: function() {
+					return false;
+				},
+				isLinux: function() {
+					return false;
+				},
+				isMac: function() {
+					return false;
+				},
+				isMobile: function() {
+					return false;
+				},
+				isMozilla: function() {
+					return false;
+				},
+				isOpera: function() {
+					return false;
+				},
+				isRtf: function() {
+					return true;
+				},
+				isSafari: function() {
+					return true;
+				},
+				isSun: function() {
+					return false;
+				},
+				isWap: function() {
+					return false;
+				},
+				isWapXhtml: function() {
+					return false;
+				},
+				isWebKit: function() {
+					return true;
+				},
+				isWindows: function() {
+					return true;
+				},
+				isWml: function() {
+					return false;
+				}
+			},
+
+			Data: {
+				NAV_SELECTOR: '#navigation',
+
+				isCustomizationView: function() {
+					return false;
+				},
+
+				notices: [
+					null
+
+					
+
+					
+				]
+			},
+
+			ThemeDisplay: {
+				
+					getLayoutId: function() {
+						return "17";
+					},
+					getLayoutURL: function() {
+						return "https://www.t-mobile.cz/muj-t-mobile";
+					},
+					getParentLayoutId: function() {
+						return "1";
+					},
+					isPrivateLayout: function() {
+						return "false";
+					},
+					isVirtualLayout: function() {
+						return false;
+					},
+				
+
+				getBCP47LanguageId: function() {
+					return "cs-CZ";
+				},
+				getCDNBaseURL: function() {
+					return "https://static2.t-mobile.cz";
+				},
+				getCDNDynamicResourcesHost: function() {
+					return "https://static2.t-mobile.cz";
+				},
+				getCDNHost: function() {
+					return "https://static2.t-mobile.cz";
+				},
+				getCompanyId: function() {
+					return "10703";
+				},
+				getCompanyGroupId: function() {
+					return "10741";
+				},
+				getDefaultLanguageId: function() {
+					return "cs_CZ";
+				},
+				getDoAsUserIdEncoded: function() {
+					return "";
+				},
+				getLanguageId: function() {
+					return "cs_CZ";
+				},
+				getParentGroupId: function() {
+					return "63037020";
+				},
+				getPathContext: function() {
+					return "";
+				},
+				getPathImage: function() {
+					return "https://static2.t-mobile.cz/image";
+				},
+				getPathJavaScript: function() {
+					return "/html/js";
+				},
+				getPathMain: function() {
+					return "/c";
+				},
+				getPathThemeImages: function() {
+					return "https://static2.t-mobile.cz/tmcz-theme/images";
+				},
+				getPathThemeRoot: function() {
+					return "/tmcz-theme";
+				},
+				getPlid: function() {
+					return "63079223";
+				},
+				getPortalURL: function() {
+					return "https://www.t-mobile.cz";
+				},
+				getPortletSetupShowBordersDefault: function() {
+					return false;
+				},
+				getScopeGroupId: function() {
+					return "63037020";
+				},
+				getScopeGroupIdOrLiveGroupId: function() {
+					return "63037020";
+				},
+				getSessionId: function() {
+					
+						
+						
+							return "";
+						
+					
+				},
+				getSiteGroupId: function() {
+					return "63037020";
+				},
+				getURLControlPanel: function() {
+					return "/group/control_panel?refererPlid=63079223";
+				},
+				getURLHome: function() {
+					return "https\x3a\x2f\x2fwww\x2et-mobile\x2ecz\x2fweb\x2fguest";
+				},
+				getUserId: function() {
+					return "10706";
+				},
+				getUserName: function() {
+					
+						
+						
+							return "";
+						
+					
+				},
+				isAddSessionIdToURL: function() {
+					return false;
+				},
+				isFreeformLayout: function() {
+					return false;
+				},
+				isImpersonated: function() {
+					return false;
+				},
+				isSignedIn: function() {
+					return false;
+				},
+				isStateExclusive: function() {
+					return false;
+				},
+				isStateMaximized: function() {
+					return false;
+				},
+				isStatePopUp: function() {
+					return false;
+				}
+			},
+
+			PropsValues: {
+				NTLM_AUTH_ENABLED: false
+			}
+		};
+
+		var themeDisplay = Liferay.ThemeDisplay;
+
+		
+
+		Liferay.AUI = {
+			getAvailableLangPath: function() {
+				return 'available_languages.jsp?browserId=other&themeId=tmczvcc_WAR_tmcztheme&colorSchemeId=01&minifierType=js&companyId=10703&languageId=cs_CZ&b=6201&t=1670444455000';
+			},
+			getCombine: function() {
+				return true;
+			},
+			getComboPath: function() {
+				return 'https://static2.t-mobile.cz/combo/?browserId=other&minifierType=&languageId=cs_CZ&b=6201&t=1670444455000&';
+			},
+			getFilter: function() {
+				
+					
+						return 'min';
+					
+					
+					
+				
+			},
+			getJavaScriptRootPath: function() {
+				return '/html/js';
+			},
+			getLangPath: function() {
+				return 'aui_lang.jsp?browserId=other&themeId=tmczvcc_WAR_tmcztheme&colorSchemeId=01&minifierType=js&languageId=cs_CZ&b=6201&t=1670444455000';
+			}
+		};
+
+		Liferay.authToken = 'HxEH5329';
+
+		
+
+		Liferay.currentURL = '\x2fmuj-t-mobile';
+		Liferay.currentURLEncoded = '%2Fmuj-t-mobile';
+	// ]]>
+</script>
+
+
+	
+		
+			
+				<script src="https://static2.t-mobile.cz/html/js/barebone.jsp?browserId=other&amp;themeId=tmczvcc_WAR_tmcztheme&amp;colorSchemeId=01&amp;minifierType=js&amp;minifierBundleId=javascript.barebone.files&amp;languageId=cs_CZ&amp;b=6201&amp;t=1670444455000" type="text/javascript"></script>
+			
+			
+		
+	
+	
+
+
+<script type="text/javascript">
+	// <![CDATA[
+		
+
+			
+
+			
+				Liferay.Portlet.list = ['rcorevccm_WAR_vcc', '1_WAR_article2portlet_INSTANCE_mXhPR3mmyjrZ', 'welcomeportlet_WAR_navigationportlet', 'lweminicart_WAR_lweeshopportlet', 'rvccnavigationm_WAR_vcc', 'rvcclanguage_WAR_vcc', 'footerportlet_WAR_navigationportlet', 'rvccnavigationm_WAR_vcc', 'rvcclanguage_WAR_vcc', 'searchsmallcorporateportlet_WAR_searchcorporateportlet_INSTANCE_0g0budeGj6ON'];
+			
+		
+
+		
+
+		
+	// ]]>
+</script>
+
+
+
+
+
+	
+		
+
+			
+
+			
+		
+		
+	
+
+
+
+	
+		
+		
+
+			
+
+			
+		
+	
+
+
+<!--  top_js-ext -->
+
+
+	
+	
+		<script src="https://cdn.t-mobile.cz/lead-collector-legacy/lead-api.min.js" type="text/javascript"></script>
+	
+
+<!--  top_js-ext -->
+
+
+
+
+
+
+
+	
+
+				<script src="https://static.t-mobile.cz/cdn/js/vue-axios/v1/vue-axios.min.js" type="text/javascript"></script>
+
+	
+
+				<script src="https://static2.t-mobile.cz/lwe-eshop-portlet/js/polyfill-functions.js?browserId=other&amp;minifierType=js&amp;languageId=cs_CZ&amp;b=6201&amp;t=1670414834000" type="text/javascript"></script>
+
+	
+
+				<script src="https://static2.t-mobile.cz/lwe-eshop-portlet/js/ajaxUI.js?browserId=other&amp;minifierType=js&amp;languageId=cs_CZ&amp;b=6201&amp;t=1670414834000" type="text/javascript"></script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	if (window.enhance && typeof window.enhance.loadCSS === 'function') {
+		var jQueryNode = document.getElementById('jquery');
+		enhance.loadCSS('https://static2.t-mobile.cz/tmcz-theme/css/custom.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414802000', jQueryNode);
+	} else {
+			var ss = window.document.createElement('link');
+			ss.type = 'text/css';
+			ss.rel = 'stylesheet';
+			ss.media = 'screen';
+			ss.href = 'https://static2.t-mobile.cz/tmcz-theme/css/custom.css?browserId=other&themeId=tmczvcc_WAR_tmcztheme&minifierType=css&languageId=cs_CZ&b=6201&t=1670414802000';
+			document.getElementsByTagName('head')[0].appendChild(ss);
+	}
+</script>
+<noscript>
+	<link href="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;tmcz-theme&#x2f;css&#x2f;custom&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;tmczvcc_WAR_tmcztheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670414802000" rel="stylesheet" media="screen" />
+</noscript>
+
+
+
+
+  <style type="text/css">
+    /*-------------------------------------------------
+ COMMON
+--------------------------------------------------*/
+
+#wizardMobileBox .cleaned:after {
+	content: " ";
+	clear: both;
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	height: 0;
+}
+
+* html #wizardMobileBox .cleaned             { zoom: 1; } /* IE6 */
+*:first-child+html #wizardMobileBox .cleaned { zoom: 1; } /* IE7 */
+
+.forBlind {
+	position: absolute;
+	left: -10000px;
+	top: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/*-------------------------------------------------
+ WRAPPER
+--------------------------------------------------*/
+
+#wizardMobileBox {
+}
+
+/*-------------------------------------------------
+ WIZARD
+--------------------------------------------------*/
+
+#wizardMobileBox ul {
+  margin: 0;
+  padding: 0;
+}
+#wizardMobileBox li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#wizardMobileBox li ul {
+  display: none;
+}
+#wizardMobileBox .wMBRound {
+  padding: 6px 15px;
+  border: 1px solid #8d8d8d;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  color: #ffffff;
+  background: #929292 url('/images/6823b385-bd22-4298-a8c1-b7a648e383aa.png') no-repeat 0 0;
+  cursor: pointer;
+}
+#wizardMobileBox .wMBSecondLevel .wMBRound {
+  float: left;
+  width: 192px;
+}
+#wizardMobileBox .wMBOpen > .wMBRound, #wizardMobileBox .wMBOpen h3.wMBRound {
+  border-color: #e30175;
+  background-color: #ea127d;
+  background-position: -500px 0;
+}
+#wizardMobileBox h3.wMBRound {
+  width: 120px;
+  margin: 0 auto !important;
+  padding: 8px 15px;
+  text-align: center;
+  font-size: 107%;
+  font-weight: bold;
+}
+#wizardMobileBox .wMBOpen h3.wMBRound {
+  background-position: -1000px 0;
+}
+#wizardMobileBox .wMBResult {
+  display: none;
+}
+#wizardMobileBox #lineMBE .item {
+  left: 20px;
+}
+#wizardMobileBox #lineMB .item {
+  left: 240px;
+}
+#wizardMobileBox ul.wMBFirstLevel {
+  min-height: 70px;
+	padding: 10px 0;
+}
+#wizardMobileBox li.wMBFirstLevelItem {
+  float: left;
+  width: 50%;
+}
+#wizardMobileBox ul.wMBSecondLevel {
+  clear: both;
+  padding-top: 40px;
+}
+#wizardMobileBox .wMBOpen ul.wMBSecondLevel {
+  background: url('/images/1c72ae27-be99-4e9c-afea-9f2c1c287a16.png') no-repeat 0 0;
+  =width: 568px;
+}
+#wizardMobileBox #lineMBE ul.wMBSecondLevel {
+  margin-right: -100%;
+  background-position: 0 0;
+}
+#wizardMobileBox #lineMB ul.wMBSecondLevel {
+  margin-left: -100%;
+  background-position: -600px 0;
+}
+#wizardMobileBox li.wMBSecondLevelItem {
+  position: relative;
+  padding: 5px 0 5px 40px;
+  background: url('/images/1c72ae27-be99-4e9c-afea-9f2c1c287a16.png') no-repeat -1200px 50%;
+  =float: left;
+  =width: 528px;
+}
+#wizardMobileBox li.wMBSecondLevelItem.wMBOpen.wMBChildren {
+  background-position: -1800px 50%;
+}
+#wizardMobileBox li.wMBSecondLevelItem.last {
+  background-position: -3600px 50%;
+}
+#wizardMobileBox li.wMBSecondLevelItem.last.wMBOpen.wMBChildren {
+  background-position: -4200px 50%;
+}
+#wizardMobileBox li.wMBSecondLevelItem.last {
+}
+#wizardMobileBox ul.wMBThirdLevel {
+  position: absolute;
+  top: -50%;
+  left: 264px;
+  z-index: 10;
+  =width: 264px;
+}
+#wizardMobileBox .first ul.wMBThirdLevel {
+  top: 0;
+}
+#wizardMobileBox .last ul.wMBThirdLevel {
+  top: auto;
+  bottom: 0;
+}
+#wizardMobileBox li.wMBThirdLevelItem {
+  padding: 5px 0 5px 40px;
+  background: url('/images/1c72ae27-be99-4e9c-afea-9f2c1c287a16.png') no-repeat -1200px 50%;
+  =float: left;
+  =width: 224px;
+}
+#wizardMobileBox li.wMBThirdLevelItem.first {
+  background-position: -2400px 50%;
+}
+#wizardMobileBox li.wMBThirdLevelItem.last {
+  background-position: -3600px 50%;
+}
+#wizardMobileBox ul.wMBThirdLevel .wMBRound {
+}
+#wizardMobileBox #wMBResult {
+  margin: 0 40px 20px;
+}
+#wizardMobileBox #wMBResult .wMBRTitle {
+  margin: 0 0 5px 15px;
+}
+#wizardMobileBox #wMBResult .wMBRPrint {
+  min-height: 1.4em;
+  padding: 10px 15px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  line-height: 1.4;
+  color: #ffffff;
+  background: #78aa51;
+}
+  </style>
+
+
+
+
+
+  <style type="text/css">
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+      
+
+    
+
+  </style>
+
+
+
+	
+	<link id="childcss" rel="stylesheet" href="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;tmcz-theme&#x2f;css&#x2f;custom-child&#x2e;css&#x3f;browserId&#x3d;other&#x26;themeId&#x3d;tmczvcc_WAR_tmcztheme&#x26;minifierType&#x3d;css&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670414802000" />
+
+	
+	<script type="text/javascript">
+		var is_tmcz_authenticated = false;
+	</script>
+
+	
+<!-- bottom-ext.jsp  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			    <!-- Start VWO Asynchronous Code
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=415444,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+End VWO Asynchronous Code -->		  
+
+			    <style type="text/css">
+  .journal-article-container .lfr-ddm-container .field-wrapper textarea {
+    width: 100% !important;
+    height: 100vh !important;
+  }
+</style>		  
+
+			    <style>
+@media screen and (max-width: 991px){
+	.navbar-one:after {
+		pointer-events: none;
+	}
+}
+</style>		  
+
+			    <style>
+/* Hiding old surveys (parent fb remarketing pagescript) */
+#exponea_survey {
+  display:none;
+}
+</style>		  
+
+			    <style>
+
+@media screen and (min-width:768px) .section-description {
+    margin-top: 90px;
+}
+
+</style>		  
+
+			    <script>
+var dataLayer = dataLayer || []; // Google Tag Manager
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WXF57L');</script>
+<!-- End Google Tag Manager -->		  
+
+			    <style>
+.grecaptcha-badge {
+  visibility: hidden;
+  opacity: 0;
+}
+</style>		  
+
+
+
+
+
+</head>
+
+	<body class=" yui3-skin-sam controls-visible signed-out public-page site logged-out" data-theme-images-folder="https://static2.t-mobile.cz/tmcz-theme/images">
+
+
+
+<!-- bottom-ext.jsp  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WXF57L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>		  
+
+			    <!-- Exponea initialize -->
+<script type="text/javascript" src="https://www.t-mobile.cz/downloadcenter/download/92ca6a2e-7b6b-4944-b488-91fc7a113a17$exponea-loader-vcc.js"></script>
+<script>
+if(isScriptAllowedRec('exponea')) {
+(function(d,b){if(!d.infinario){var a=function(a,g){function k(c){return function(){var e=arguments;""==a&&"initialize"==c&&e&&e[0].modify&&e[0].modify.overlay&&"loading"==b.readyState&&(b.write('<div id="__inf__overlay__" style="position:absolute;background:#fff;left:0;top:0;width:100%;height:100%;z-index:1000000"></div>'),setTimeout(function(){var a=b.getElementById("__inf__overlay__");a&&b.body.removeChild(a);res.__=!0},e[0].modify.delay||500));d.infinario._.push([a+c,arguments])}}var h=g.split(" "),f,c;res={_:[]};for(c=0;c<h.length;c++)f=h[c],res[f]=k(f);return res};d.infinario=a("","initialize identify update track trackLink trackEnhancedEcommerce getHtml showHtml showBanner showForm ping getAbTest");d.infinario.notifications=a("notifications.","isAvailable isSubscribed subscribe unsubscribe");var a=b.createElement("script"),g="https:"===b.location.protocol?"https:":"http:";a.type="text/javascript";a.async=!0;a.src="https://api-analytics.t-mobile.cz/js/infinario.min.js";b.getElementsByTagName("head")[0].appendChild(a)}})(window,document);
+
+var cookieTrackingId = jQuery.cookie ? jQuery.cookie("gftCookie") : "";
+var TRACKING_ID = cookieTrackingId != null ? cookieTrackingId.toString().slice(0, 10) : "0";
+var tracking_login = is_tmcz_authenticated;
+var tracking_login_page = jQuery.cookie ? jQuery.cookie("Loginpagecookie-referrer") : null;
+
+//inicializace
+infinario.initialize({
+    "target": "//api-analytics.t-mobile.cz",
+    "token": "f4f33564-e4ab-11e6-9d36-5a5952174db1",
+    "track": {
+        "visits": true,
+        "default_properties": {
+            "registered": TRACKING_ID,
+            "login": tracking_login,
+            "login_page": tracking_login_page,
+            "source": "legacy_shop"
+        }
+    },
+    "ping":{
+        "properties":{
+            "utm_campaign_mine": document.location.href.split("campaign=")[1] ? document.location.href.split("campaign=")[1].split("&")[0].split('#')[0] : ""
+        }
+    }   
+});
+
+// identifikace
+infinario.identify(TRACKING_ID); 
+
+}
+</script>		  
+
+			    <script>
+//console.info('medallia init');
+var medalliaScript = false;
+medalliaScriptAdd();	
+window.addEventListener('message', receivePostMessageOS, false);
+
+function getCookieByName(name) {
+  var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  var value;
+  if (match) {
+      value = unescape(match[2]);
+  } else{
+      value = null;
+  }
+  return value;
+}
+
+function isScriptAllowedRec(category) {
+  var result = false;
+  var consentCookie = JSON.parse(getCookieByName('corec'));
+  //console.log("consentCookie: ");
+  //console.log(consentCookie);
+  if (consentCookie != null) {
+    Object.keys(consentCookie).forEach(function(key) {
+      //console.log('key: ' + key);
+      if(key == category) {
+        result = this[key];
+      }
+    }, consentCookie);
+  }
+  return result;
+}
+
+function receivePostMessageOS(event) {
+  if(event.data['evName'] == 'pushToDL') {
+    if(event.data['dataLayer'].event == 'consentChanged') {
+      //console.info('consentChanged event!!!');
+      medalliaScriptAdd();
+    }
+  }
+}
+
+//delete cookie
+function deleteCookie(name) { document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT; domain=.t-mobile.cz';}
+
+function medalliaScriptAdd() {
+	//var paramName = 'reklamni';
+	//console.info('function medalliaScript: ');
+	if(isScriptAllowedRec('medallia')) {
+		if(!medalliaScript) {
+			var head = document.getElementsByTagName('head')[0];
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = 'https://resources.digital-cloud.medallia.eu/wdceu/88153/onsite/embed.js';
+			setTimeout(function() {
+				if(!medalliaScript) {
+					head.appendChild(script);
+					//console.info('medallia attached');
+					medalliaScript = true;
+				}
+      }, 90000);
+		}
+	} else {
+		deleteCookie('kampyleSessionPageCounter');
+		deleteCookie('kampyleUserSession');
+		deleteCookie('kampyleUserSessionsCount');
+		deleteCookie('kampyle_userid');
+		//console.info('medallia dettached');
+	}
+}
+</script>		  
+
+			    <!-- Facebook Pixel Code -->
+<script>
+if(isScriptAllowedRec('facebook')) {
+!function(f,b,e,v,n,t,s) {
+ if(f.fbq) return;
+  n=f.fbq=function() {
+   n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+  };
+  if(!f._fbq) f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)
+ }(window, document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1703904506520456');
+fbq('track', 'PageView');
+}
+</script>
+<noscript>
+ <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1703904506520456&amp;ev=PageView&amp;noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->		  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="header">
+					<div class="navbar navbar-old navbar-transparent navbar-vcc">
+					<div class="container">
+				<div class="navbar-header">
+					<a href="https://www.t-mobile.cz/muj-t-mobile?p_p_auth=WVAIHVfC&amp;p_p_id=49&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;_49_struts_action=%2Fmy_sites%2Fview&amp;_49_groupId=63037020&amp;_49_privateLayout=false" class="logo" accesskey="2" title="T-Mobile">
+						<svg class="icon">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo2"></use>
+						</svg>
+						<noscript>
+															<img src="https://static2.t-mobile.cz/tmcz-theme/images/custom/logo-white.svg" class="logo-white" alt="T-Mobile" />
+													</noscript>
+					</a>
+					<button type="button" class="toggle js-toggle">
+						<span></span>
+						<span></span>
+						<span>Menu</span>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" preserveAspectRatio="none">
+							<circle cx="8" cy="8" r="6.29" transform="rotate(90 8 8)"/>
+						</svg>
+					</button>
+				</div>
+				<div class="nav-wrapper">
+					<div class="nav-group">
+						<!--	WELCOME PORTLET	-->
+													
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_welcomeportlet_WAR_navigationportlet_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_welcomeportlet_WAR_navigationportlet_" >
+		<span id="p_welcomeportlet_WAR_navigationportlet"></span>
+
+
+
+	
+	
+	
+
+		
+
+			
+				
+					
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+		
+
+		
+			
+			
+
+				
+
+				<div class="portlet-borderless-container" style="">
+					
+
+					
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<noscript>
+	
+		
+		
+			<a href="https://www.t-mobile.cz/.gang/login-url/portal" class="user-info lightbox" data-lightbox-size="large"><i class="ico-user-15px" data-mtm='Přihlásit'></i> <span>Přihlásit</span></a>
+		
+	
+</noscript>
+
+
+
+
+<div id="_welcomeportlet_WAR_navigationportlet_viewTarget">
+</div>
+
+<script type="text/javascript">
+	jQuery(function () {
+		jQuery.ajax("https://www.t-mobile.cz/muj-t-mobile?p_p_id=welcomeportlet_WAR_navigationportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_resource_id=ajaxViewRes&p_p_cacheability=cacheLevelPage",{
+			contentType: 'text/html; charset=UTF-8',
+			success: function( data ) {
+				jQuery('#_welcomeportlet_WAR_navigationportlet_viewTarget').append(data);
+				jQuery('body').tmInit(['essential']);
+			}
+		});
+	});
+</script>
+
+	
+	
+
+					
+				
+			
+		
+	
+	
+
+
+
+	</div>
+
+				</div>
+
+				
+			
+		
+	
+
+				
+				
+			
+
+		
+
+	
+
+
+
+
+
+		
+	</div>
+
+
+
+
+
+																			<!--	/WELCOME PORTLET	-->
+
+													<div id="nav">
+								<!--	RVCC NAVIGATION PORTLET	-->
+																
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_rvccnavigationm_WAR_vcc_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_rvccnavigationm_WAR_vcc_" >
+		<span id="p_rvccnavigationm_WAR_vcc"></span>
+
+
+
+	
+	
+	
+
+		
+
+			
+				
+					
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+		
+
+		
+			
+			
+
+				
+
+				<div class="portlet-borderless-container" style="">
+					
+
+					
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+					
+						
+
+
+	
+
+		
+			
+				<div id="navsettings">
+					<ul class="nav navbar-nav navbar-nav-vcc" role="navigation">
+						<li>
+							<a href="/prehled-uctu"> 
+								Přehled
+							</a>
+						</li>
+						<li>
+							<a href="/prehled-sluzeb" class="dropdown-toggle" data-toggle="dropdown"> 
+								Služby <i class="ico-chevron-down"></i>
+							</a>
+						</li>
+						<li>
+							<a href="/platby-a-vyuctovani" class="dropdown-toggle" data-toggle="dropdown"> 
+								Vyúčtování <i class="ico-chevron-down"></i>
+							</a>
+						</li>
+						<li>
+							<a href="/moje-smlouva" class="dropdown-toggle" data-toggle="dropdown"> 
+								Smlouva <i class="ico-chevron-down"></i>
+							</a>
+						</li>
+					</ul>
+			</div>
+		
+
+	
+	
+
+					
+				
+			
+		
+	
+	
+
+
+
+	</div>
+
+				</div>
+
+				
+			
+		
+	
+
+				
+				
+			
+
+		
+
+	
+
+
+
+
+
+		
+	</div>
+
+
+
+
+
+																<!--	/RVCC NAVIGATION PORTLET	-->
+								<a href="https://www.t-mobile.cz/sms" class="sms">Poslat SMS</a>
+								<ul class="nav-segments">
+									<li><a href="https://www.t-mobile.cz/muj-t-mobile?p_p_auth=WVAIHVfC&amp;p_p_id=49&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;_49_struts_action=%2Fmy_sites%2Fview&amp;_49_groupId=63037020&amp;_49_privateLayout=false"><i class="ico-house-3" aria-hidden="true"></i>Zpět na T&#8209;Mobile.cz</a></li>
+								</ul>
+							</div>
+						
+						<!--	LWE MINI CART PORTLET	-->
+												
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_lweminicart_WAR_lweeshopportlet_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_lweminicart_WAR_lweeshopportlet_" >
+		<span id="p_lweminicart_WAR_lweeshopportlet"></span>
+
+
+
+	
+	
+	
+
+		
+
+			
+				
+					
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+		
+
+		
+			
+			
+
+				
+
+				<div class="portlet-borderless-container" style="">
+					
+
+					
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+					
+						
+
+
+	
+
+		<script>
+	/*<![CDATA[*/
+	var expr = "lwePortletName=\"null\"";
+	eval(expr);
+
+	var jsErrors = {
+		'genericAjaxErrorTitle': "Chyba",
+		'genericAjaxErrorText': "Po\u017Eadovan\u00E1 akce nemohla b\u00FDt provedena z d\u016Fvodu chyby syst\u00E9mu.<br\/><br\/>Zkuste pros\u00EDm po\u017Eadavek opakovat pozd\u011Bji. Pokud probl\u00E9m p\u0159etrv\u00E1v\u00E1, kontaktujte na\u0161i z\u00E1kaznickou linku."
+	}
+	/*]]>*/
+
+	var lwePortletVariables = lwePortletVariables || {};
+	var portletId = "lweminicart_WAR_lweeshopportlet";
+	lwePortletVariables[portletId] = {
+		currentUrl: "\/muj-t-mobile\/-\/mc\/",
+		currentUrlWithoutFriendlyUrlMapping: "\/muj-t-mobile",
+		formFieldNamePrefix: "_lweminicart_WAR_lweeshopportlet_"
+	}
+</script>
+
+<div id="lwe-minicart-root">
+	<a class="cart" :href="shoppingCartUrl">
+		<i class="icon ico-cart-15px-full"></i>Nákupní košík
+		<template v-if="numberOfItems > 0">
+			<span class="sr-only">Položek:</span>
+			<span class="count">{{numberOfItems}}</span>
+		</template>
+	</a>
+</div>
+
+
+<span style="display: none; visibility: hidden;" id="formFieldNamePrefix" value="_lweminicart_WAR_lweeshopportlet_"></span>
+
+
+	
+	
+
+					
+				
+			
+		
+	
+	
+
+
+
+	</div>
+
+				</div>
+
+				
+			
+		
+	
+
+				
+				
+			
+
+		
+
+	
+
+
+
+
+
+		
+	</div>
+
+
+
+
+
+												<!--	/LWE MINI CART PORTLET	-->
+
+						<!--	SMALL SEARCH PORTLET	-->
+													
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_searchsmallcorporateportlet_WAR_searchcorporateportlet_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_searchsmallcorporateportlet_WAR_searchcorporateportlet_INSTANCE_0g0budeGj6ON_" >
+		<span id="p_searchsmallcorporateportlet_WAR_searchcorporateportlet_INSTANCE_0g0budeGj6ON"></span>
+
+
+
+	
+	
+	
+
+		
+
+			
+				
+					
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+		
+
+		
+			
+			
+
+				
+
+				<div class="portlet-borderless-container" style="">
+					
+
+					
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/podpora/vyhledavani" class="search-toggle" data-toggle="collapse" data-target="#search"><i class="ico-magnifier"></i>Hledat</a>
+<div id="search" class="collapse search-collapse">
+  <form action="/podpora/vyhledavani" method="post" role="search">
+    <fieldset>
+      <div class="form-group searchbox">
+        <i class="ico-magnifier search-icon"></i>
+        <label for="q" class="sr-only">Napište, co hledáte...</label>
+        <input type="search" id="q" name="query" placeholder="Napište, co hledáte..." accesskey="4" class="form-control input-lg autocomplete" data-source-url="https://www.t-mobile.cz/muj-t-mobile?p_p_id=searchsmallcorporateportlet_WAR_searchcorporateportlet_INSTANCE_0g0budeGj6ON&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage" />
+        <button type="submit" class="btn btn-link btn-lg">Vyhledat</button>
+      </div>
+    </fieldset>
+  </form>
+  <i class="ico-remove search-close" data-toggle="collapse" data-target="#search"></i>
+</div>
+
+	
+	
+
+					
+				
+			
+		
+	
+	
+
+
+
+	</div>
+
+				</div>
+
+				
+			
+		
+	
+
+				
+				
+			
+
+		
+
+	
+
+
+
+
+
+		
+	</div>
+
+
+
+
+
+																			<!--	/SMALL SEARCH PORTLET	-->
+
+						<!--  LANGUAGE SWITCHER	-->
+													
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_rvcclanguage_WAR_vcc_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_rvcclanguage_WAR_vcc_" >
+		<span id="p_rvcclanguage_WAR_vcc"></span>
+
+
+
+	
+	
+	
+
+		
+
+			
+				
+					
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+		
+
+		
+			
+			
+
+				
+
+				<div class="portlet-borderless-container" style="">
+					
+
+					
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+					
+						
+
+
+	
+
+		
+
+	
+
+		<style>
+			.nav-group a.language {
+				right: 265px !important;
+			}
+
+			.nav-group a.sms {
+				right: 415px !important;
+			}
+
+			@media screen and (min-width: 992px) {
+				.nav-group a.language i {
+					display: inline-block !important;
+				}
+			}
+
+			@media screen and (max-width: 991px) {
+				.nav-group a.language {
+					right: auto !important;
+				}
+
+				.nav-group a.sms {
+					right: auto !important;
+				}
+			}
+		</style>
+
+		
+		<script>
+			$(document).ready(function () {
+				var searchPortlet = document.getElementById("p_p_id_searchsmallcorporateportlet_WAR_searchcorporateportlet_INSTANCE_0g0budeGj6ON_");
+				if (searchPortlet !== undefined && searchPortlet !== null) {
+					// lupa
+					document.getElementById(
+							"p_p_id_searchsmallcorporateportlet_WAR_searchcorporateportlet_INSTANCE_0g0budeGj6ON_").style.display = "none";
+				}
+
+				// docasne skryt - je neaktualni a lidi breci
+				var faqPortlet = document.getElementById("p_p_id_1_WAR_article2portlet_INSTANCE_mXhPR3mmyjrZ_");
+				if (faqPortlet !== undefined && faqPortlet !== null) {
+					document.getElementById(
+							"p_p_id_1_WAR_article2portlet_INSTANCE_mXhPR3mmyjrZ_").style.display = "none";
+				}
+
+
+				// error
+				var errorMsg =  document.querySelector("#p_p_id_rcorevccm_WAR_vcc_ > div > div > div");
+				if (errorMsg !== undefined && errorMsg !== null && errorMsg.classList != null && errorMsg.classList.length === 2
+						&& errorMsg.classList.contains("alert") && errorMsg.classList.contains("alert-error")) {
+
+					var text = errorMsg.innerHTML;
+					const replacement = document.createElement('div')
+					replacement.classList.add("container", "margin-large");
+
+					replacement.innerHTML = '<div class="alert alert-danger text-center" role="alert">' + '<div class="alert-content">'
+							+ '<p>'+ text +'</p>'
+							+ '</div></div>';
+
+					document.querySelector("#p_p_id_rcorevccm_WAR_vcc_ > div > div > div").replaceWith(replacement);
+				}
+
+				// odstavka
+				var outageMsg =  document.querySelector("#p_p_id_rcorevccm_WAR_vcc_ > div > div > h3");
+				if (outageMsg !== undefined && outageMsg !== null && outageMsg.classList != null && outageMsg.classList.length === 1
+						&& outageMsg.classList.contains("portlet-msg-error")) {
+
+					var textMsg = outageMsg.innerHTML;
+					const replacement = document.createElement('div')
+					replacement.classList.add("container", "margin-large");
+
+					replacement.innerHTML = '<div class="alert alert-danger text-center" role="alert">' + '<div class="alert-content">'
+							+ '<p>'+ textMsg +'</p>'
+							+ '</div></div>';
+
+					document.querySelector("#p_p_id_rcorevccm_WAR_vcc_ > div > div > h3").replaceWith(replacement);
+				}
+
+			});
+		</script>
+
+
+		
+		<!--		        <a th:unless="${#strings.equals(currentLanguage, 'en')}"-->
+		<!--		           liferay:href="portletname='rcorevccm_WAR_vcc',windowState='normal',locale='en_US'"-->
+		<!--		           class="language" title="Switch to English"><i class="ico-earth" aria-hidden="true"></i> English</a>-->
+
+		<!--        &lt;!&ndash;/* pokud to neni en tak zobraz moznost prepnuti do CZ */&ndash;&gt;-->
+		<!--        <a th:if="${#strings.equals(currentLanguage, 'en')}"-->
+		<!--           liferay:href="portletname='rcorevccm_WAR_vcc',windowState='normal',locale='cs_CZ'"-->
+		<!--           class="language" title="Switch to Czech"><i class="ico-earth" aria-hidden="true"></i> Czech</a>-->
+		<a class="language" title="Sledování žádosti" href="https://www.t-mobile.cz/muj-t-mobile/-/module/faultReporting?_rcorevccm_WAR_vcc_location=header">
+			<i class="question-sign-15px">
+				<svg class="svg-question-sign-15px" width="15" height="15">
+					<use xlink:href="#question-sign-15px"></use>
+				</svg>
+			</i>
+			Sledování požadavku
+		</a>
+	
+
+
+	
+
+
+
+	
+	
+
+					
+				
+			
+		
+	
+	
+
+
+
+	</div>
+
+				</div>
+
+				
+			
+		
+	
+
+				
+				
+			
+
+		
+
+	
+
+
+
+
+
+		
+	</div>
+
+
+
+
+
+																			<!-- 
+						else
+							<a href="/web/en" class="language"><i class="ico-earth" aria-hidden="true"></i> English</a>
+						end
+						/LANGUAGE SWITCHER	-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="main-content" role="main" class="bs3-grid-1-1">
+	<div class="container">
+		<div class="row portlet-layout">
+			<div id="column-1" class="portlet-column portlet-column-only" data-column-info="Placeholder for first column">
+				<div class="portlet-dropzone empty portlet-column-content portlet-column-content-only" id="layout-column_column-1"></div>
+			</div>
+		</div>
+	</div>
+	<div class="portlet-layout">
+		<div id="column-2" class="portlet-column portlet-column-only" data-column-info="Drop your portlet here (second column)">
+			<div class="portlet-dropzone portlet-column-content portlet-column-content-only" id="layout-column_column-2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_rcorevccm_WAR_vcc_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_rcorevccm_WAR_vcc_" >
+		<span id="p_rcorevccm_WAR_vcc"></span>
+
+
+
+	
+	
+	
+
+		
+
+			
+				
+					
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+		
+
+		
+			
+			
+
+				
+
+				<div class="portlet-borderless-container" style="">
+					
+
+					
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+					
+						
+
+
+	
+
+		
+	<style>
+
+		.nav-group a.language {
+			right: 140px !important;
+		}
+
+		.nav-group a.sms {
+			right: 290px !important;
+		}
+
+		.caption {
+			color: #000000;
+			padding: 0px;
+		}
+
+		.caption-no-devices {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+			height: 400px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-image: url("https://www.t-mobile.cz/dcpublic/unlogged_dashboard_banner.png"), linear-gradient(180deg, #FFFFFF 0%, #E5F0F9 100%);
+		}
+
+		.no-wrap {
+			white-space: nowrap;
+		}
+
+		.help-text {
+			font-weight: inherit;
+			font-size: 17px;
+		}
+
+		/* velky rozliseni */
+		@media screen and (min-width: 1200px) {
+			.caption-no-devices {
+				height: 400px !important;
+			}
+		}
+
+		/* mensi rozliseni */
+		@media screen and (max-width: 991px) {
+			.caption-no-devices {
+				height: 220px;
+			}
+
+			.nav-group a.language {
+				right: auto !important;
+			}
+
+			.nav-group a.sms {
+				right: auto !important;
+			}
+
+			.extra-small-cta {
+				margin-left: 5px !important;
+			}
+		}
+
+		/* stedne velky rozliseni */
+		@media screen and (min-width: 992px) {
+			.caption-no-devices {
+				height: 285px;
+			}
+
+			.nav-group a.language i {
+				display: inline-block !important;
+			}
+
+			.btn-no-devices-2 {
+				padding-left: 10px !important;
+				padding-right: 10px !important;
+				font-size: 16px !important;
+			}
+		}
+
+		/* mensi a mensi rozliseni */
+		@media screen and (max-width: 768px ) {
+			.caption-no-devices {
+				width: 100%;
+				height: 400px;
+				background-image: url("https://www.t-mobile.cz/dcpublic/education_no_devices_mobile.png"), linear-gradient(180deg, #FFFFFF 0%, #E5F0F9 100%);
+			}
+
+			.btn-no-devices {
+				padding-left: 5px !important;
+				padding-right: 5px !important;
+				font-size: 16px !important;
+			}
+		}
+
+		/* jeste mensi rozliseni */
+		@media screen and (min-width: 768px) {
+			.btn-no-devices {
+				padding-left: 5px !important;
+				padding-right: 5px !important;
+				font-size: 16px !important;
+			}
+		}
+
+	</style>
+
+	<div class="vcc-container">
+		
+		
+					
+					<div></div>
+
+					<script>
+						/*<![CDATA[*/
+						$(document).ready(function () {
+
+							var authType = "NONE";
+							var su = "";
+							var cont = "";
+							var mcode = "dashboard";
+							var channel = "WEB_EXT";
+
+							if (typeof dataLayer !== 'undefined') {
+
+								if (authType) {
+									dataLayer.push({'authType': authType});
+								}
+
+								if (su) {
+									dataLayer.push({'su': su});
+								}
+
+								if (cont) {
+									dataLayer.push({'cont': cont});
+								}
+
+								if (mcode) {
+									dataLayer.push({'mcode': mcode});
+								}
+
+								if (channel) {
+									dataLayer.push({'channel': channel});
+								}
+
+								if (window.innerWidth < 576) {
+									// Small devices (landscape phones, 576px and up)
+									dataLayer.push({'view': 'phone'});
+								} else if (window.innerWidth < 768) {
+									// Medium devices (tablets, 768px and up)
+									dataLayer.push({'view': 'tablet'});
+								} else {
+									// Large devices (desktops, 992px and up)
+									// Extra large devices (large desktops, 1200px and up)
+									dataLayer.push({'view': 'desktops'});
+								}
+
+								var offeringInfo = null;
+
+								if (offeringInfo) {
+									dataLayer.push({'action': 'sent_order'});
+									dataLayer.push({'po': offeringInfo});
+								}
+							}
+						});
+						/*]]>*/
+					</script>
+				
+		
+		<div class="container">
+			<h1 class="h2 text-center">
+				<span>Přihlášení do <br><span style="color: #000000;">HACKED LOL,No, Just FAKE by janvarry@gmail.com </span><br><span style="color: #e80074;">Můj T-Mobile</span></span>
+			</h1>
+		</div>
+
+		<div class="flex-column">
+			<div>
+				<div class="container">
+					<h2 class="h3 text-center margin-base">Mějte přehled a vyřeště vše co potřebujete online ještě dnes. Nevíte si rady s přihlášením? Poradíme <a href="/prihlaseni-do-muj-t-mobile" style="color: #e80074;">jak se přihlásit.</a></h2>
+				</div>
+				<div class="background-gray-lighter inner">
+					<div class="container">
+						<div class="row row-boxes mt-base" id="loginSection">
+							<div class="col-xs-12 col-sm-6 first-lg first-sm last-xs">
+								<form id="loginForm"
+											action="https://www.t-mobile.cz/.gang/login-url/portal?nexturl=%2Fmuj-t-mobile"
+											method="post" class="box-wrapper">
+									<div class="box-heading">
+										<h2 class="h3">Jménem a heslem</h2>
+									</div>
+									<div class="box-content flex-column">
+										<div class="row">
+											<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+												<div class="form-group margin-base">
+													<div class="input-prefix-label">
+														<label for="username">Uživatelské jméno</label>
+														<input type="text" name="username" id="username"
+																	 class="form-control input-lg" required="required"/>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="input-prefix-label">
+														<label for="passwordID">Heslo</label>
+														<div class="input-group">
+															<input type="password" name="password" id="passwordID"
+																		 class="form-control input-lg js-toggle-password"
+																		 required="required">
+															<div class="input-group-btn">
+																<button type="button"
+																				class="btn btn-default btn-small-padding btn-lg js-toggle-password-btn"
+																				aria-label="Zobrazit heslo">
+																	<i class="ico-eye-on js-toggle-password-icon-visibility-on"
+																		 aria-hidden="true"></i>
+																	<i class="ico-eye-off js-toggle-password-icon-visibility-off"
+																		 aria-hidden="true"></i>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div>
+													<input name="nextURL" type="hidden"
+																 value="https://www.t-mobile.cz/muj-t-mobile"/>
+													<input name="errURL" type="hidden" value="clickError.jsp"/>
+												</div>
+												<div class="row center-xs">
+													<div class="mb-small">
+														<a href="/zapomenute-heslo" class="text-small">Zapomněli jste heslo nebo máte zablokovaný účet?</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="box-action-zone text-center">
+										<input type="submit" class="btn btn-primary btn-block-xxs" name="submit"
+													 value="Přihlásit se"/>
+									</div>
+								</form>
+							</div>
+							<div class="col-xs-12 col-sm-6">
+								<form id="loginFormOtp"
+											action="https://www.t-mobile.cz/.gang/msisdn-url?nexturl=%2Fmuj-t-mobile"
+											method="post" class="box-wrapper">
+									<div class="box-heading">
+										<h2 class="h3"
+												id="loginTitle">Pomocí SMS</h2>
+									</div>
+									<div class="box-content flex-column center-xs">
+										<div class="row">
+											<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+												<div class="form-group margin-base" id="msisdnGroupForm">
+													<div class="input-prefix-label">
+														<label for="msisdn"
+																	 id="inputMsisdn">Zadejte své telefonní číslo nebo číslo služby.</label>
+														<input type="tel"
+																	 name="msisdn"
+																	 id="msisdn"
+																	 class="form-control input-lg"
+																	 required="required"
+																	 data-toggle="popover" data-trigger="focus"
+																	 data-placement="top"
+																	 data-original-title="" title="">
+														<input type="hidden" name="nextUrl" id="nextUrl">
+													</div>
+												</div>
+												<p class="form-error hidden" id="formMsisdnField">Toto je povinné pole.</p>
+											</div>
+										</div>
+									</div>
+									<div class="box-action-zone text-center">
+										<input type="submit" class="btn btn-primary btn-block-xxs" value="Pošlete mi kód">
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="row row-boxes mt-base center-xs hidden" id="otpSection">
+							<div class="col-xs-12 col-sm-6">
+								<form id="validOtpForm"
+											action="/.gang/otp" data-ajax-action="/.gang/otp/json" method="post"
+											class="box-wrapper">
+									<div class="box-heading">
+										<h2 class="h3">Přihlásit se jednorázově</h2>
+										<p style="margin-bottom: 0px; margin-top: 10px;" id="otpDesc">[Na váš telefon jsme vám zaslali jednorázový kód. Pokud SMS nepřijde do několika
+											minut, ujistěte se, že máte
+											zapnutý telefon s aktivní SIM kartou T-Mobile. Poté zasílání zopakujte.]</p>
+									</div>
+									<div class="box-content flex-column center-xs">
+										<div class="row">
+											<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+												<div class="form-group margin-base" id="formOtpGroup">
+													<div class="input-prefix-label">
+														<label for="otp"
+																	 id="otpInput">Zadejte kód z SMS</label>
+														<input type="text"
+																	 name="otp"
+																	 id="otp"
+																	 oninput="changeOtpValue(this.value)"
+																	 maxlength="6"
+																	 class="form-control input-lg"
+																	 required="required"
+																	 data-toggle="popover" data-trigger="focus"
+																	 data-placement="top"
+																	 data-original-title="" title="">
+													</div>
+												</div>
+												<p class="form-error hidden margin-base" id="formOtpValidField">Toto je povinné pole.</p>
+												<p class="hidden margin-base" id="sendAgainOtpValid">OTP bylo znovu odeslano.</p>
+											</div>
+										</div>
+									</div>
+									<div class="box-action-zone text-center">
+										<a id="loginAgainId" href="#" onclick="sendAgainOtp();return false;"
+											 class="btn btn-link btn-small-padding btn-block-xxs">Zaslat znovu</a>
+										<input id="loginCtaId" type="submit" disabled value="Přihlásit se" class="btn btn-primary btn-block-xxs"/>
+									</div>
+<!--									<input name="nextURL" type="hidden" id="nextURLOtp"-->
+<!--												 value="https://www.t-mobile.cz/muj-t-mobile"/>-->
+								</form>
+
+							</div>
+						</div>
+
+						<!-- VYHODY -->
+						<div class="row">
+							<div class="col-xs-12 col-lg-10 col-lg-offset-1">
+								<div class="media-group row margin-base mt-large">
+									<div class="col-xxs-12 col-xs-6 col-md-3">
+										<div class="media">
+											<div class="media-figure">
+												<i class="ico-overview-bold" data-ico-width="52" data-ico-height="52"
+													 aria-hidden="true"></i>
+											</div>
+											<div class="media-body text-center-xs">
+												<p class="margin-small no-bold">Hlídejte své výdaje a čerpání dat</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-xxs-12 col-xs-6 col-md-3">
+										<div class="media">
+											<div class="media-figure">
+												<i class="ico-wallet-2" data-ico-width="52" data-ico-height="52"
+													 aria-hidden="true"></i>
+											</div>
+											<div class="media-body text-center-xs">
+												<p class="margin-small no-bold">Zaplaťte své služby jednoduše on-line</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-xxs-12 col-xs-6 col-md-3">
+										<div class="media">
+											<div class="media-figure">
+												<i class="ico-50-sale" data-ico-width="52" data-ico-height="52"
+													 aria-hidden="true"></i>
+											</div>
+											<div class="media-body text-center-xs">
+												<p class="margin-small no-bold">Získejte přístup ke speciálním akcím</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-xxs-12 col-xs-6 col-md-3">
+										<div class="media">
+											<div class="media-figure">
+												<i class="ico-phone-app" data-ico-width="52" data-ico-height="52"
+													 aria-hidden="true"></i>
+											</div>
+											<div class="media-body text-center-xs">
+												<p class="margin-small no-bold">Spravujte účet odkudkoliv díky mobilní aplikaci</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /VYHODY -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- APP BANNER -->
+		<div class="caption caption-no-arrow margin-0 caption-no-devices">
+			
+			<div class="visible-lg">
+				<div class="row" style="margin-top: -80px;">
+					<div class="col-lg-5"></div>
+					<div class="col-lg-6">
+						<h2 class="text-center" style="font-size: 36px;">Vyzkoušejte aplikaci <span class="no-wrap">Můj T‑Mobile</span></h2>
+						<h3 class="text-center h4" style="font-weight: inherit;">Stáhněte si aplikaci <span class="no-wrap">Můj T-Mobile</span> a jednoduše spravujte všechny své služby. Kdykoli a kdekoli.</h3>
+					</div>
+					<div class="col-lg-1"></div>
+				</div>
+				<div class="row" style="margin-top: 30px;">
+					<div class="col-lg-5"></div>
+					<div class="col-lg-6">
+						<a class="btn btn-primary" href="https://itunes.apple.com/cz/app/m%C5%AFj-t-mobile/id1386652007?mt=8" role="button">AppStore</a>
+						<a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=cz.tmobile.oneapp" role="button">Google Play</a>
+						<a class="btn btn-primary" href="https://appgallery.huawei.com/#/app/C101395653?locale=cs_CZ" role="button">Huawei AppGallery</a>
+					</div>
+					<div class="col-lg-1"></div>
+				</div>
+			</div>
+
+			
+			<div class="visible-md">
+				<div class="row" style="margin-top: -50px;">
+					<div class="col-md-5"></div>
+					<div class="col-md-6">
+						<h2 class="text-center" style="font-size: 36px;">Vyzkoušejte aplikaci <span class="no-wrap">Můj T‑Mobile</span></h2>
+						<h3 class="text-center h4" style="font-weight: inherit;">Stáhněte si aplikaci <span class="no-wrap">Můj T-Mobile</span> a jednoduše spravujte všechny své služby. Kdykoli a kdekoli.</h3>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+				<div class="row" style="margin-top: 15px;">
+					<div class="col-md-5"></div>
+					<div class="col-md-6 text-center">
+						<a class="btn btn-primary btn-no-devices-2" href="https://itunes.apple.com/cz/app/m%C5%AFj-t-mobile/id1386652007?mt=8" role="button">AppStore</a>
+						<a class="btn btn-primary btn-no-devices-2" href="https://play.google.com/store/apps/details?id=cz.tmobile.oneapp" role="button">Google Play</a>
+						<a class="btn btn-primary btn-no-devices-2" href="https://appgallery.huawei.com/#/app/C101395653?locale=cs_CZ" role="button">Huawei AppGallery</a>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+			</div>
+
+			
+			<div class="visible-sm">
+				<div class="row" style="margin-top: -40px;">
+					<div class="col-sm-5"></div>
+					<div class="col-sm-6" style="line-height: 17px;">
+						<h2 class="text-center" style="font-size: 24px;">Vyzkoušejte aplikaci <span class="no-wrap">Můj T‑Mobile</span></h2>
+						<h3 class="text-center h4" style="font-weight: inherit; font-size: 17px;">Stáhněte si aplikaci <span class="no-wrap">Můj T-Mobile</span> a jednoduše spravujte všechny své služby. Kdykoli a kdekoli.</h3>
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+				<div class="row" style="margin-top: 5px;">
+					<div class="col-sm-5"></div>
+					<div class="col-sm-6">
+						<a class="btn btn-primary btn-no-devices" href="https://itunes.apple.com/cz/app/m%C5%AFj-t-mobile/id1386652007?mt=8" role="button">AppStore</a>
+						<a class="btn btn-primary btn-no-devices" href="https://play.google.com/store/apps/details?id=cz.tmobile.oneapp" role="button">Google Play</a>
+						<a class="btn btn-primary btn-no-devices" href="https://appgallery.huawei.com/#/app/C101395653?locale=cs_CZ" role="button">Huawei AppGallery</a>
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+			</div>
+
+			
+			<div class="visible-xs">
+				<div class="row" style="margin-top: -175px;">
+					<div class="col-xs-12 text-center">
+						<h2 class="text-center" style="font-size: 24px; line-height: 24px;">Vyzkoušejte aplikaci <span class="no-wrap">Můj T‑Mobile</span></h2>
+						<h3 class="text-center h4 help-text">Stáhněte si aplikaci <span class="no-wrap">Můj T-Mobile</span> a jednoduše spravujte všechny své služby. Kdykoli a kdekoli.</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<a class="btn btn-primary btn-no-devices" href="https://itunes.apple.com/cz/app/m%C5%AFj-t-mobile/id1386652007?mt=8" role="button">AppStore</a>
+						<a class="btn btn-primary btn-no-devices extra-small-cta" href="https://play.google.com/store/apps/details?id=cz.tmobile.oneapp" role="button">Google Play</a>
+						<a class="btn btn-primary btn-no-devices extra-small-cta" href="https://appgallery.huawei.com/#/app/C101395653?locale=cs_CZ" role="button">Huawei AppGallery</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			jQuery(window).load(function () {
+				if (jQuery.fn.disturber) {
+					jQuery(document).disturber({
+						scenes: [{
+							selector: '.billboard.animate',
+							action: {
+								css: 'fade-in'
+							}
+						}],
+						mobile: true
+					});
+				} else {
+					console.error('jQuery Disturber plugin is missing!');
+				}
+
+				$("#loginForm").attr('action',
+						window.location.protocol + '//' + window.location.hostname + '/.gang/login-url/portal?nexturl=%2F' + window.location.pathname.substring(1)
+						+ window.location.search + window.location.hash);
+
+				$("#nextUrl").attr('value', window.location.pathname.substring(1) + window.location.search + window.location.hash);
+				$("#nextURLOtp").attr('value', window.location.href);
+
+				$("#loginFormOtp").attr('action',
+						window.location.protocol + '//' + window.location.hostname + '/.gang/msisdn-url?nexturl=%2F' + window.location.pathname.substring(1)
+						+ window.location.search + window.location.hash);
+
+				// $('#loginFormOtp').submit(function (e) {
+				//
+				// 	e.preventDefault();
+				// 	$.ajax({
+				// 		url: window.location.protocol + '//' + window.location.hostname + '/.gang/msisdn-url?nexturl=%2F' + window.location.pathname.substring(1)
+				// 				+ window.location.search + window.location.hash,
+				// 		type: 'post',
+				// 		data: $('#loginFormOtp').serialize(),
+				// 		success: function (data) {
+				//
+				// 			const parser = new DOMParser();
+				// 			const htmlDoc = parser.parseFromString(data, 'text/html');
+				// 			const err = htmlDoc.getElementsByClassName("alert alert-danger");
+				// 			const isError = data.search("error.Type")
+				// 			const msisdn = $('#msisdnGroupForm')
+				// 			const msisdnField = $('#formMsisdnField')
+				// 			const formGroup = $('#formOtpGroup')
+				// 			const otpField = $('#formOtpValidField')
+				// 			const otpAgain = $('#sendAgainOtpValid')
+				//
+				// 			if (err !== undefined && err.length === 1) {
+				// 				msisdn.addClass("has-error")
+				// 				msisdnField.removeClass("hidden")
+				// 				let errCode = data.search("Kód chyby:G ")
+				// 				let errKey
+				// 				if (errCode === -1) {
+				// 					errCode = data.search("Kód chyby: G ")
+				// 					errKey = data.substring(errCode + 13, errCode + 16);
+				// 				} else {
+				// 					errKey = data.substring(errCode + 12, errCode + 15);
+				// 				}
+				// 				msisdnField.text(getMessage(errKey))
+				// 			} else if (data.search("error.Type") !== -1) {
+				// 				const errCode = data.substring(isError + 19, isError + 22);
+				// 				if ($("#loginSection").hasClass("hidden")) {
+				// 					// kliknuti na poslat znovu ale uz jsme na screen s OTP
+				// 					formGroup.addClass("has-error")
+				// 					otpField.removeClass("hidden")
+				// 					otpAgain.addClass("hidden")
+				// 					otpField.text(getMessage(errCode))
+				// 				} else {
+				// 					msisdn.addClass("has-error")
+				// 					msisdnField.removeClass("hidden")
+				// 					msisdnField.text(getMessage(errCode))
+				// 				}
+				// 			} else {
+				// 				if ($("#loginSection").hasClass("hidden")) {
+				// 					// kliknuti na poslat znovu ale uz jsme na screen s OTP
+				// 					formGroup.removeClass("has-error")
+				// 					otpField.addClass("hidden")
+				// 					otpAgain.removeClass("hidden")
+				// 					otpAgain.text(getMessage("sendAgain"))
+				// 				} else {
+				// 					msisdn.removeClass("has-error")
+				// 					msisdnField.addClass("hidden")
+				// 					otpAgain.addClass("hidden")
+				// 					$("#loginSection").addClass("hidden")
+				// 					$("#otpSection").removeClass("hidden")
+				// 				}
+				// 			}
+				// 		}
+				// 	});
+				// });
+				//
+				// $('#validOtpForm').submit(function (e) {
+				// 	$('#validOtpForm').tmAddLoader($('[data-ajax-loader-text]').data('ajax-loader-text'));
+				// 	e.preventDefault();
+				// 	$.ajax({
+				// 		url: '/.gang/otp',
+				// 		type: 'post',
+				// 		headers: {  'Access-Control-Allow-Origin': 'https://www.t-mobile.cz' },
+				// 		data: $('#validOtpForm').serialize(),
+				// 		success: function (data) {
+				//
+				// 			console.log("success")
+				//
+				// 			const parser = new DOMParser();
+				// 			const htmlDoc = parser.parseFromString(data, 'text/html');
+				// 			const err = htmlDoc.getElementsByClassName("alert alert-danger");
+				// 			const isError = data.search("error.Type");
+				// 			const formGroup = $('#formOtpGroup')
+				// 			const otpField = $('#formOtpValidField')
+				// 			const otpAgain = $('#sendAgainOtpValid')
+				//
+				// 			if (err !== undefined && err.length === 1) {
+				// 				formGroup.addClass("has-error")
+				// 				otpField.removeClass("hidden")
+				// 				otpAgain.addClass("hidden")
+				// 				let errCode = data.search("Kód chyby:G ")
+				// 				let errKey
+				// 				if (errCode === -1) {
+				// 					errCode = data.search("Kód chyby: G ")
+				// 					errKey = data.substring(errCode + 13, errCode + 16);
+				// 				} else {
+				// 					errKey = data.substring(errCode + 12, errCode + 15);
+				// 				}
+				// 				otpField.text(getMessage(errKey))
+				// 				$('#validOtpForm').tmRemoveLoader();
+				// 			} else if (isError !== -1) {
+				// 				const errCode = data.substring(isError + 19, isError + 22);
+				// 				formGroup.addClass("has-error")
+				// 				otpField.removeClass("hidden")
+				// 				otpAgain.addClass("hidden")
+				// 				otpField.text(getMessage(errCode))
+				// 				$('#validOtpForm').tmRemoveLoader();
+				// 			} else {
+				// 				formGroup.removeClass("has-error")
+				// 				otpField.addClass("hidden")
+				//
+				// 				console.log("Redirect to " + window.location.protocol + '//' + window.location.hostname + '/' + $("#nextUrl").val())
+				//
+				// 				// var link = document.createElement("a");
+				// 				// link.id = 'testLink'; //give it an ID!
+				// 				// link.href= window.location.protocol + '//' + window.location.hostname + '/' + $("#nextUrl").val();
+				// 				// document.body.appendChild(link);
+				// 				// document.getElementById('testLink').click();
+				//
+				// 				// nexturl=/um/GANGpages/json/ok_login_welcome.json
+				//
+				// 				window.location.href = window.location.protocol + '//' + window.location.hostname + '/' + $("#nextUrl").val()
+				// 			}
+				// 		}
+				// 	});
+				// });
+			});
+		</script>
+		<script>
+			/*<![CDATA[*/
+
+			const allMessages = new Map();
+			const esimFlow = window.location.search.search("esim") !== -1
+
+			function changeOtpValue(value) {
+				var cta = document.getElementById("loginCtaId");
+				cta.disabled = value.length !== 6;
+			}
+
+			function sendAgainOtp() {
+				$('#loginFormOtp').submit();
+			}
+
+			function getAllMessages() {
+
+				allMessages.set("403", "Nem\u00E1te opr\u00E1vn\u011Bn\u00ED pro vstup na tuto str\u00E1nku. Kontaktuje spr\u00E1vce va\u0161\u00ED smlouvy.");
+				allMessages.set("404", "Tuto str\u00E1nku jsme u n\u00E1s nena\u0161li. Zkontrolujte zadanou adresu nebo ji zkuste <a>naj\u00EDt<\/a>.");
+
+				allMessages.set("500", "Omlouv\u00E1me se, slu\u017Eba je do\u010Dasn\u011B nedostupn\u00E1. Zkuste to pros\u00EDm pozd\u011Bji.");
+				allMessages.set("502", "Omlouv\u00E1me se, ale slu\u017Eba je do\u010Dasn\u011B nedostupn\u00E1. Zkuste to pros\u00EDm pozd\u011Bji.");
+				allMessages.set("566", "Omlouv\u00E1me se, ale slu\u017Eba je do\u010Dasn\u011B nedostupn\u00E1. Zkuste to pros\u00EDm pozd\u011Bji.");
+
+				allMessages.set("701", "Je n\u00E1m l\u00EDto, v\u00E1\u0161 \u00FA\u010Det je uzam\u010Den. Obnovte ho <a href=\"\\\u0026quot;\/zapomenute-heslo\\\u0026quot;\">zm\u011Bnou hesla<\/a> a n\u00E1sledn\u00FDm p\u0159ihl\u00E1\u0161en\u00EDm.");
+				allMessages.set("703", "Tuto str\u00E1nku jsme u n\u00E1s nena\u0161li. Zkontrolujte zadanou adresu nebo ji zkuste <a href=\"https:\/\/www.t-mobile.cz\/podpora\/vyhledavani\">naj\u00EDt<\/a>.");
+				allMessages.set("704", "Dlouho neprob\u011Bhla \u017E\u00E1dn\u00E1 akce, va\u0161e p\u0159ihl\u00E1\u0161en\u00ED proto vypr\u0161elo. Pro dal\u0161\u00ED pr\u00E1ci v M\u016Fj T-Mobile se pros\u00EDm znovu p\u0159ihlaste.");
+				allMessages.set("705", "Omlouv\u00E1me se, ale nepoda\u0159ilo se n\u00E1m v\u00E1s p\u0159ihl\u00E1sit. Zkuste to pros\u00EDm znovu.");
+				allMessages.set("706", "Zadan\u00E9 u\u017Eivatelsk\u00E9 jm\u00E9no \u010Di heslo nen\u00ED spr\u00E1vn\u00E9. Zkuste to pros\u00EDm znovu.");
+				allMessages.set("707", "Bohu\u017Eel se n\u00E1m neda\u0159\u00ED na\u010D\u00EDst obsah str\u00E1nky. Povolte pros\u00EDm soubory cookie ve sv\u00E9m prohl\u00ED\u017Ee\u010Di.");
+				allMessages.set("708", "Zadan\u00E9 u\u017Eivatelsk\u00E9 jm\u00E9no \u010Di heslo nen\u00ED spr\u00E1vn\u00E9. Zkuste to pros\u00EDm znovu.");
+				allMessages.set("709", "Omlouv\u00E1me se, ale slu\u017Eba je do\u010Dasn\u011B nedostupn\u00E1. Zkuste to pros\u00EDm pozd\u011Bji.");
+				allMessages.set("710", "Omlouv\u00E1me se, jednor\u00E1zov\u00E9 heslo nelze odeslat. Zadan\u00E9 \u00FAdaje se n\u00E1m nepoda\u0159ilo naj\u00EDt.");
+
+				allMessages.set("711", "Zadan\u00E9 heslo nen\u00ED spr\u00E1vn\u00E9. Zkuste to pros\u00EDm znovu.");
+				allMessages.set("713", "Omlouv\u00E1me se, jednor\u00E1zov\u00E9 heslo nelze odeslat. Zadan\u00E9 \u00FAdaje se n\u00E1m nepoda\u0159ilo naj\u00EDt.");
+				allMessages.set("714", "Omlouv\u00E1me se, ale jednor\u00E1zov\u00E9 heslo se nepoda\u0159ilo odeslat. Zkuste to pros\u00EDm znovu.");
+				allMessages.set("715", "Omlouv\u00E1me se, ale nepoda\u0159ilo se n\u00E1m v\u00E1s p\u0159ihl\u00E1sit. Zkuste to pros\u00EDm znovu.");
+				allMessages.set("716", "Byl p\u0159ekro\u010Den limit pro opakovan\u00E9 zad\u00E1n\u00ED jednor\u00E1zov\u00E9ho hesla.");
+				allMessages.set("717", "Byl p\u0159ekro\u010Den limit pro opakovan\u00E9 zad\u00E1n\u00ED jednor\u00E1zov\u00E9ho hesla.");
+				allMessages.set("718", "Omlouv\u00E1me se, ale jednor\u00E1zov\u00E9 heslo se nepoda\u0159ilo odeslat. Zkuste to pros\u00EDm znovu.");
+				allMessages.set("719", "Jednor\u00E1zov\u00E9 heslo bylo ji\u017E pou\u017Eito. Zadejte pros\u00EDm znovu telefonn\u00ED \u010D\u00EDslo a nov\u00E9 jednor\u00E1zov\u00E9 heslo.");
+				allMessages.set("720", "Je n\u00E1m l\u00EDto, ale na tuto str\u00E1nku ji\u017E nem\u00E1te p\u0159\u00EDstup. V souvislosti s va\u0161\u00ED \u017E\u00E1dost\u00ED o zablokov\u00E1n\u00ED slu\u017Eby, v\u00E1m byla odebr\u00E1na i mo\u017Enost jej\u00ED administrace.");
+
+				allMessages.set("721", "Zadan\u00E9 u\u017Eivatelsk\u00E9 jm\u00E9no \u010Di heslo nen\u00ED spr\u00E1vn\u00E9. Zkuste to pros\u00EDm znovu nebo si <a href=\"\\\u0026quot;\/zapomenute-heslo\\\u0026quot;\">\u00FA\u010Det obnovte <\/a>.");
+				allMessages.set("722", "Omlouv\u00E1me se, p\u0159ihl\u00E1\u0161en\u00ED do webov\u00E9 samoobsluhy M\u016Fj T-Mobile v tuto chv\u00EDli nen\u00ED mo\u017En\u00E9. D\u011Bl\u00E1me v\u0161e pro to, abychom ji co nejd\u0159\u00EDve op\u011Bt zprovoznili. Zkuste to pros\u00EDm pozd\u011Bji.");
+				allMessages.set("723", "Omlouv\u00E1me se, p\u0159ihl\u00E1\u0161en\u00ED do webov\u00E9 samoobsluhy M\u016Fj T-Mobile v tuto chv\u00EDli nen\u00ED mo\u017En\u00E9. Zkuste to pozd\u011Bji.");
+				allMessages.set("724", "Omlouv\u00E1me se, p\u0159ihl\u00E1\u0161en\u00ED do webov\u00E9 samoobsluhy M\u016Fj T-Mobile v tuto chv\u00EDli nen\u00ED mo\u017En\u00E9. Zkuste to pozd\u011Bji.");
+				allMessages.set("725", "Omlouv\u00E1me se, p\u0159ihl\u00E1\u0161en\u00ED do webov\u00E9 samoobsluhy M\u016Fj T-Mobile v tuto chv\u00EDli nen\u00ED mo\u017En\u00E9. Zkuste to pozd\u011Bji.");
+				allMessages.set("726", "Omlouv\u00E1me se, p\u0159ihl\u00E1\u0161en\u00ED do webov\u00E9 samoobsluhy M\u016Fj T-Mobile v tuto chv\u00EDli nen\u00ED mo\u017En\u00E9. Zkuste to pozd\u011Bji.");
+				allMessages.set("727", "Je n\u00E1m l\u00EDto, ale tato slu\u017Eba pro v\u00E1s nen\u00ED dostupn\u00E1.");
+				allMessages.set("728", "Omlouv\u00E1me se, jednor\u00E1zov\u00E9 heslo nelze odeslat. Zadan\u00E9 \u00FAdaje se n\u00E1m nepoda\u0159ilo naj\u00EDt.");
+
+				allMessages.set("802", "Omlouv\u00E1me se, ale jednor\u00E1zov\u00E9 p\u0159ihl\u00E1\u0161en\u00ED nelze vyu\u017E\u00EDt pro \u010D\u00EDsla pevn\u00FDch linek.");
+				allMessages.set("803", "Bohu\u017Eel pro v\u00E1\u0161 \u00FA\u010Det nen\u00ED mo\u017En\u00E9 vyu\u017E\u00EDt jednor\u00E1zov\u00E9ho p\u0159ihl\u00E1\u0161en\u00ED. P\u0159ihlaste se pros\u00EDm u\u017Eivatelsk\u00FDm jm\u00E9nem a heslem.");
+				allMessages.set("804", "V\u00E1\u0161 \u00FA\u010Det je na 24 hodin uzam\u010Den. Vy\u010Dkejte na jeho automatick\u00E9 odem\u010Den\u00ED nebo si <a href=\"\\\u0026quot;\/zapomenute-heslo\\\u0026quot;\">\u00FA\u010Det obnovte<\/a>.");
+				allMessages.set("805", "Va\u0161e SIM karta je suspendov\u00E1na, proto nem\u00E1te p\u0159\u00EDstup ke v\u0161em online slu\u017Eb\u00E1m M\u016Fj T-Mobile. Moment\u00E1ln\u011B m\u00E1te k dispozici p\u0159ehled <a href=\"\\\u0026quot;\/online-vyuctovani\\\u0026quot;\">Vy\u00FA\u010Dtov\u00E1n\u00ED slu\u017Eeb<\/a> a elektronickou schr\u00E1nku T-Box (do kter\u00E9 se dostanete prost\u0159ednictv\u00EDm sekce Vol\u00E1n\u00ED, klikem na bublinu). K suspendaci va\u0161\u00ED SIM karty do\u0161lo bu\u010F z d\u016Fvodu neuhrazen\u00E9ho vy\u00FA\u010Dtov\u00E1n\u00ED a m\u00E1te nyn\u00ED na kart\u011B nastavenou p\u0159edplacenou slu\u017Ebu, nebo na va\u0161i \u017E\u00E1dost.");
+				allMessages.set("806", "Omlouv\u00E1me se, ale jednor\u00E1zov\u00E9 p\u0159ihl\u00E1\u0161en\u00ED nelze vyu\u017E\u00EDt pro \u010D\u00EDsla pevn\u00FDch linek a ADSL.");
+				allMessages.set("809", "Pro zobrazen\u00ED slu\u017Eby se pros\u00EDm p\u0159ihlaste.");
+				allMessages.set("810", "Omlouv\u00E1me se, ale jednor\u00E1zov\u00E9 heslo nelze vyu\u017E\u00EDt pro p\u0159il\u00E1\u0161en\u00ED se slu\u017Ebou T-Mobile televize.");
+
+				allMessages.set("sendAgain", "Pr\u00E1v\u011B jsme v\u00E1m odeslali nov\u00E9 jednor\u00E1zov\u00E9 p\u0159ihla\u0161ovac\u00ED heslo.");
+			}
+
+			function getMessage(val) {
+				return allMessages.get(val)
+			}
+
+			$(document).ready(function () {
+				// fill msg
+				getAllMessages();
+
+				const otpDesc = document.getElementById("otpDesc")
+				let desc
+				if (esimFlow) {
+					desc = "Pr\u00E1v\u011B jsme v\u00E1m odeslali email s jednor\u00E1zov\u00FDm heslem a instrukcemi k p\u0159ihl\u00E1\u0161en\u00ED do M\u016Fj T-Mobile. Pokud email nedoraz\u00ED do n\u011Bkolika minut, zkontrolujte pros\u00EDm slo\u017Eku spam."
+					const inputMsisdn = document.getElementById("inputMsisdn")
+					inputMsisdn.innerText = "Zadejte va\u0161e nov\u00E9 telefonn\u00ED \u010D\u00EDslo z emailu."
+					const otpInput = document.getElementById("otpInput")
+					otpInput.innerText = "Zadejte k\u00F3d z emailu"
+					const loginTitle = document.getElementById("loginTitle")
+					loginTitle.innerText = "Pomoc\u00ED emailu"
+
+				} else {
+					desc = "Pr\u00E1v\u011B jsme v\u00E1m na telefon zaslali jednor\u00E1zov\u00E9 p\u0159ihla\u0161ovac\u00ED heslo. Pokud SMS nep\u0159ijde do n\u011Bkolika minut, ujist\u011Bte se, \u017Ee m\u00E1te zapnut\u00FD telefon s aktivn\u00ED SIM kartou T-Mobile. Pot\u00E9 zas\u00EDl\u00E1n\u00ED zopakujte."
+				}
+				otpDesc.innerText = desc
+
+				//
+				var login = document.getElementById("p_p_id_welcomeportlet_WAR_navigationportlet_");
+				if (login !== undefined && login !== null) {
+					// login
+					document.getElementById(
+							"p_p_id_welcomeportlet_WAR_navigationportlet_").style.display = "none";
+				}
+
+				$(document).on("click", "#msisdn", function () {
+
+					var text = "Pou\u017Eijte form\u00E1t: 603603603 nebo TV000000000";
+					var eSimText = "Pou\u017Eijte form\u00E1t \u010D\u00EDsla: 603603603";
+					var finalText = esimFlow ? eSimText : text
+
+					if (window.innerWidth < 768) {
+						// Small devices (landscape phones, 576px and up)
+						var textXs = "Pou\u017Eijte form\u00E1t: 603603603";
+						$(this).attr('data-content', textXs);
+					} else if (window.innerWidth > 768 && window.innerWidth < 992) {
+						// Medium devices (tablets, 768px and up)
+						$(this).attr('data-content', finalText);
+					} else {
+						// Large devices (desktops, 992px and up)
+						// Extra large devices (large desktops, 1200px and up)
+						$(this).attr('data-content', finalText);
+					}
+
+					$(this).popover("show");
+				});
+			});
+			/*]]>*/
+		</script>
+
+	</div>
+
+
+	
+	
+
+					
+				
+			
+		
+	
+	
+
+
+
+	</div>
+
+				</div>
+
+				
+			
+		
+	
+
+				
+				
+			
+
+		
+
+	
+
+
+
+
+
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_1_WAR_article2portlet_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_1_WAR_article2portlet_INSTANCE_mXhPR3mmyjrZ_" >
+		<span id="p_1_WAR_article2portlet_INSTANCE_mXhPR3mmyjrZ"></span>
+
+
+
+	
+	
+	
+
+		
+
+			
+				
+					
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+		
+
+		
+			
+			
+
+				
+
+				<div class="portlet-borderless-container" style="">
+					
+
+					
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+<div class="container">                      
+    <div class="row">                                        
+        <div class="col-xs-12 col-xs-offset-0 col-lg-10 col-lg-offset-1">                                                          
+            <h2 class="text-center margin-large">Co vás nejvíc zajímá</h2>                                                            
+            <div class="panel panel-faq">                                                                              
+                <div class="panel-body">                                                                                                
+                    <h3 class="h4 faq-heading">                                                                                                                  
+                        <a href="#firstfaq" class="collapse-link faq-link v-center collapsed" data-toggle="collapse" aria-expanded="false">                                                                                                                                    
+                            <span>Jak si mohu navýšit datový limit?                                                                                                                    
+                            </span>                                                                                                                                    
+                            <i class="ico-chevron-down collapse-icon right" data-ico-width="12" data-ico-height="6" aria-hidden="true"></i>              </a>            </h3>                                                                                                  
+                    <div id="firstfaq" class="collapse-content collapse" aria-expanded="false" style="height: 0px;">                                                                                                                    
+                        <p>Navýšení (jedná se o jednorázový dokup dat) je možné provést následujícími způsoby:                                                  
+                        </p>                                                 
+                        <ul>                                                         
+                            <li>SMS zprávou na číslo 4603 ve tvaru DOKUPDATA 60MB; DOKUPDATA 220MB, DOKUPDATA 1000MB nebo DOKUPDATA 1200MB                                                           
+                            </li>                                                         
+                            <li>přes                                                                        
+                            <a href="https://muj.t-mobile.cz/web/cz/osobni/muj-t-mobile">Můj T-Mobile</a>                                                           
+                            </li>                                                         
+                            <li>na aktivační stránce                                                                        
+                            <a href="https://www.tmo.cz/dl" target="_blank">https://tmo.cz/dl</a>, kam budete přesměrováni v momentě vyčerpání dat                                                           
+                            </li>                                                         
+                            <li>v mobilní aplikaci Můj T-Mobile, po stažení ze stránek                                                                        
+                            <a href="https://tmo.cz/mtm">https://tmo.cz/mtm</a>                                                           
+                            </li>                                                         
+                            <li>přes USSD kanál, kde stačí vytočit na vašem telefonu <strong>*123*523#</strong>                                                           
+                            </li>                                                         
+                            <li>v hlasovém automatu na čísle 4603 v sekci Služby a internet nebo stačí po pozdravu stisknout <strong>523</strong>                                                           
+                            </li>                                                 
+                        </ul>                                                 
+                        <p>Pokud se vám to ale stalo už víckrát, je vidět, že vás internet vážně baví a možná by stálo za úvahu popřemýšlet o                                                                        
+                            <a href="https://www.t-mobile.cz/internet-do-mobilu" target="_blank">balíčku s vyšším objemem dat</a>, ať se pořád nezdržujete přikupováním dat.                                                  
+                        </p>                                                 
+                        <table style="max-width:100%;" border="0">                                                         
+                            <thead>                                                                    
+                                <tr>                                                                         
+                                    <th style="padding-right: 50px;border-color:#d5dbe2 #d5dbe2 #c2c8ce; vertical-align:middle">Hodnota                                                                           
+                                    </th>                                                                           
+                                    <th style="border-color:#d5dbe2 #d5dbe2 #c2c8ce; vertical-align:middle">Cena                                                                           
+                                    </th>                                                                 
+                                </tr>                                                         
+                            </thead>                                                            
+                            <tbody>                                                                 
+                                <tr>                                                                         
+                                    <td style="border-color:#d5dbe2; vertical-align:middle">60 MB</td>                                                                         
+                                    <td style="border-color:#d5dbe2; vertical-align:middle">29 Kč</td>                                                                 
+                                </tr>                                                                 
+                                <tr>                                                                         
+                                    <td style="border-color:#d5dbe2; vertical-align:middle">220 MB</td>                                                                         
+                                    <td style="border-color:#d5dbe2; vertical-align:middle">100 Kč</td>                                                                 
+                                </tr>                                                                 
+                                <tr>                                                                         
+                                    <td style="border-color:#d5dbe2; vertical-align:middle">1000 MB</td>                                                                         
+                                    <td style="border-color:#d5dbe2; vertical-align:middle">200 Kč</td>                                                                 
+                                </tr>                                                                 
+                                <tr>                                                                         
+                                    <td style="border-color:#d5dbe2; vertical-align:middle">1200 MB</td>                                                                         
+                                    <td style="border-color:#d5dbe2; vertical-align:middle">229 Kč</td>                                                                 
+                                </tr>                                                         
+                            </tbody>                                                 
+                        </table>                                                                                                                                   
+                    </div>                                                                                
+                </div>                                                              
+            </div>                                                            
+            <div class="panel panel-faq">                                                                              
+                <div class="panel-body">                                                                                                
+                    <h3 class="h4 faq-heading">                                                                                                                  
+                        <a href="#secondfaq" class="collapse-link faq-link v-center collapsed" data-toggle="collapse"aria-expanded="false">                                                                                                                                    
+                            <span>Kdy mi vystavíte Vyúčtování?                                                                                                                    
+                            </span>                                                                                                                                    
+                            <i class="ico-chevron-down collapse-icon right" data-ico-width="12" data-ico-height="6" aria-hidden="true"></i>              </a>            </h3>                                                                                                  
+                    <div id="secondfaq" class="collapse-content collapse" aria-expanded="false" style="height: 0px;">                                                                                                                    
+                        <p>Vyúčtování služeb je vystaveno den po skončení zúčtovacího období. Zúčtovací období naleznete přímo na Vašem Vyúčtování služeb. Vyúčtování je k dispozici 4. den po konci zúčtovacího období v Můj T-Mobile (v sekci Vyúčtování a platby), tištěné Vyúčtování odesíláme poštou následující pracovní den.                         
+                        </p>                        
+                        <p>Způsob zasílání upozornění si můžete nastavit v Můj T-Mobile v sekci <strong>Moje smlouva &gt; Zasílání upozornění</strong>.                         
+                        </p>                                                                                                                                                                                 
+                    </div>                                                                                
+                </div>                                                              
+            </div>                                                            
+            <div class="panel panel-faq">                                                                              
+                <div class="panel-body">                                                                                                
+                    <h3 class="h4 faq-heading">                                                                                                                  
+                        <a href="#thirdfaq" class="collapse-link faq-link v-center collapsed" data-toggle="collapse" aria-expanded="false">                                                                                                                                    
+                            <span>Můžu si kontrolovat útratu i během zúčtovacího období?                                                                                                                    
+                            </span>                                                                                                                                    
+                            <i class="ico-chevron-down collapse-icon right" data-ico-width="12" data-ico-height="6" aria-hidden="true"></i>              </a>            </h3>                                                                                                  
+                    <div id="thirdfaq" class="collapse-content collapse" aria-expanded="false" style="height: 0px;">                                                                                            
+                        <p>Samozřejmě, máme pro vás hned několik možností, jak to udělat:                         
+                        </p>                        
+                        <p><strong>                                  
+                                <a href="https://www.t-mobile.cz/muj-limit" target="_blank">Můj limit</a></strong> – nastavíte si v Můj T-Mobile částku podle sebe, a pokud jí váš paušál překročí, dáme vám vědět SMSkou.                         
+                        </p>                        
+                        <p><strong>                                  
+                                <a href="https://www.t-mobile.cz/utrata" target="_blank">Moje útrata</a></strong> – kdykoliv vás bude zajímat vaše momentální útrata.                         
+                        </p>                        
+                        <p><strong>                                  
+                                <a href="https://www.t-mobile.cz/muj-ucet" target="_blank">Můj účet</a></strong> – hned po vystavení faktury vám pošleme SMS o výši Vyúčtování a pak i potvrzení, že nám vaše platba dorazila – a nestojí to ani korunu! Stačí odeslat SMS ve tvaru +UCET na 4603.                         
+                        </p>                                                                                                                                    
+                    </div>                                                                                
+                </div>                                                              
+            </div>                                                            
+            <div class="panel panel-faq">                                                                              
+                <div class="panel-body">                                                                                                
+                    <h3 class="h4 faq-heading">                                                                                                                  
+                        <a href="#fourthfaq" class="collapse-link faq-link v-center collapsed" data-toggle="collapse" aria-expanded="false">                                                                                                                                    
+                            <span>Můžu na svém telefonu používat internet?                                                                                                                    
+                            </span>                                                                                                                                    
+                            <i class="ico-chevron-down collapse-icon right" data-ico-width="12" data-ico-height="6" aria-hidden="true"></i>              </a>            </h3>                                                                                                  
+                    <div id="fourthfaq" class="collapse-content collapse" aria-expanded="false" style="height: 0px;">                                                                                                                    
+                        <p>No jasně, my si třeba život bez chytrých telefonů s internetem neumíme skoro ani představit! A jak na to? Pokud od nás máte rovnou i <strong>nový telefon</strong>, máte to bez práce. Naše telefony už jsou totiž na internet <strong>nastavené automaticky</strong> a vy se můžete hned vrhnout na surfování.
+                        </p>
+                        <p>V                
+                            <a href="https://www.t-mobile.cz/tarify">tarifech Mobil</a> , stejně jako v předchozí generaci tarifů S námi už máte data rovnou, u ostatních tarifů je nastavený balíček Internet v mobilu na den. Vášnivým „internetistům“ to ale dost možná stačit nebude, a tak jsme pro ně připravili výhodné               
+                            <a href="https://www.t-mobile.cz/internet-do-mobilu"> internetové balíčky</a> s měsíčním paušálem. A nezapomínáme ani na zákazníky, kteří si pořídili naši předplacenou dobíjecí kartu Twist, pro ně máme internetové balíčky do mobilu také.
+                        </p>
+                        <p>Pokud máte telefon odjinud, nevadí – nastavení mobilního internetu zvládnete levou zadní s naším interaktivním návodem na                
+                            <a href="https://www.t-mobile.cz/navody">https://www.t-mobile.cz/navody</a>. Tady taky najdete spoustu dalších šikovných triků – třeba jak si zapnout Wi-Fi, změnit vyzvánění nebo jak na přenos kontaktů ze SIM karty do svého nového chytrého telefonu.
+                        </p>                                                                                                 
+                    </div>                                                                                
+                </div>                                                              
+            </div>                                                 
+        </div>                      
+    </div>
+</div>
+
+
+	
+	
+
+					
+				
+			
+		
+	
+	
+
+
+
+	</div>
+
+				</div>
+
+				
+			
+		
+	
+
+				
+				
+			
+
+		
+
+	
+
+
+
+
+
+		
+	</div>
+
+
+
+
+</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+	
+
+
+
+
+
+<form action="#" id="hrefFm" method="post" name="hrefFm">
+	<span></span>
+</form>
+
+<!--	FOOTER PORTLET	-->
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_footerportlet_WAR_navigationportlet_  portlet-static portlet-static-end portlet-borderless  " id="p_p_id_footerportlet_WAR_navigationportlet_" >
+		<span id="p_footerportlet_WAR_navigationportlet"></span>
+
+
+
+	
+	
+	
+
+		
+
+			
+				
+					
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+		
+
+		
+			
+			
+
+				
+
+				<div class="portlet-borderless-container" style="">
+					
+
+					
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="nav-footer" class="footer footer-one" role="contentinfo"><div class="container"><div class="row"><div class="col-xs-12 col-lg-9"><div class="row footer-primary-navigation"><div class="col-xxs-12 col-xs-12 col-sm-12 col-md-4 col-lg-4"><h6><a href="/co-nejvic-chcete">SLUŽBY A PRODUKTY</a></h6><ul class="collapse" id="navfooterservices-0"><li><a href="https://eshop.t-mobile.cz/category/tariff-mobile-postpaid/list/product_listing?bp=acquisition&productOfferingTerm=noagreement&selectedToggle=TARIFF">Mobilní tarify</a></li><li><a href="/internet-na-doma">Internet</a></li><li><a href="/digitalni-televize">Televize</a></li><li><a href="/telefony-a-zarizeni">Telefony a zařízení</a></li><li><a href="/chytre-auto">Chytré auto</a></li><li><a href="/magenta-1">Vše v 1</a></li></ul></div><div class="col-xxs-12 col-xs-12 col-sm-12 col-md-4 col-lg-4"><h6><a href="/co-potrebujete">RYCHLÁ POMOC</a></h6><ul class="collapse" id="navfooterservices-1"><li><a href="/podpora/vyuctovani-a-platby">Vyúčtování a platby</a></li><li><a href="/stav-objednavky">Stav objednávky</a></li><li><a href="/roaming">Roaming</a></li><li><a href="/volani-do-zahranici">Volání do zahraničí</a></li><li><a href="/podpora/barevne-linky">Volání na barevné linky</a></li><li><a href="/kontakty">Kontakty</a></li></ul></div><div class="col-xxs-12 col-xs-12 col-sm-12 col-md-4 col-lg-4"><h6><a href="/co-se-muze-hodit">NÁSTROJE</a></h6><ul class="collapse" id="navfooterservices-2"><li><a href="/sms">Poslat SMS</a></li><li><a href="/mms">Vyzvednout MMS</a></li><li><a href="/muj-t-mobile">Můj T-Mobile</a></li><li><a href="/aplikace">Aplikace Můj T-Mobile</a></li><li><a href="/dobiti-kreditu">Dobít kredit</a></li><li><a href="/katalog-sluzeb">Katalog služeb</a></li></ul></div></div></div><div class="col-xs-12 col-lg-3"><h6>Stáhněte si naši aplikaci</h6><div class="row app-buttons"><div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6"><a href="https://play.google.com/store/apps/details?id=cz.tmobile.oneapp" class="app-button" target="_blank"><svg viewBox="0 0 208 60" color="currentColor"><path d="M87.097 30.95c1.016 0 1.835.42 2.304.911l.095.107h.07v-.743h1.899v8.183c0 3.366-1.985 4.746-4.333 4.746-2.125 0-3.435-1.372-3.977-2.552l-.061-.14 1.743-.726c.31.743 1.07 1.623 2.295 1.623 1.442 0 2.359-.859 2.43-2.47l.004-.205v-.656h-.07c-.448.552-1.311 1.034-2.398 1.034-2.278 0-4.368-1.984-4.368-4.538 0-2.572 2.09-4.574 4.367-4.574zm45.062.268l2.377 5.806h.07l2.291-5.806h2.224l-5.498 12.63h-2.085l2.034-4.514-3.567-8.116h2.154zM15.85 15.74a5358.8 5358.8 0 0 0 8.124 8.264c1.753 1.782 3.507 3.565 5.27 5.342.17.171.185.262.004.442-4.31 4.285-8.614 8.574-12.908 12.872-.263.263-.447.236-.699.042-.46-.355-.635-.828-.635-1.392 0-2.38-.004-4.76-.006-7.14v-5.047h.007l-.001-12.054c-.001-.493.095-.944.444-1.317.135-.143.234-.183.4-.012zm14.494 14.713a228.476 228.476 0 0 0 3.07 3.129c.182.182.197.256-.049.39-5.128 2.808-10.25 5.622-15.375 8.436-.085.046-.163.123-.207.151 3.995-4.038 7.991-8.072 11.977-12.119.247-.25.362-.217.584.013zm36.995.497c2.52 0 4.574 1.915 4.574 4.555 0 2.625-2.054 4.557-4.574 4.557s-4.574-1.932-4.574-4.557c0-2.64 2.054-4.555 4.574-4.555zm9.979 0c2.52 0 4.575 1.915 4.575 4.555 0 2.625-2.054 4.557-4.575 4.557-2.52 0-4.574-1.932-4.574-4.557 0-2.64 2.055-4.555 4.574-4.555zm-21.85-5.041c2.05 0 3.54.763 4.675 1.787l.176.164-1.364 1.363c-.828-.776-1.95-1.38-3.486-1.38-2.848 0-5.074 2.295-5.074 5.143s2.226 5.144 5.074 5.144c1.847 0 2.9-.743 3.573-1.416.507-.506.853-1.215 1.014-2.167l.04-.266h-4.627v-1.933h6.508c.068.344.103.758.103 1.207 0 1.451-.397 3.245-1.674 4.523-1.243 1.295-2.83 1.984-4.937 1.984-3.901 0-7.18-3.175-7.18-7.075 0-3.902 3.279-7.078 7.18-7.078zm44.644 5.04c2.281 0 3.438 1.75 3.858 2.788l.043.112.207.517-6.092 2.52c.466.915 1.19 1.383 2.208 1.383.952 0 1.632-.437 2.139-1.112l.106-.148 1.553 1.035c-.5.742-1.708 2.018-3.798 2.018-2.588 0-4.521-2.001-4.521-4.557 0-2.71 1.95-4.555 4.297-4.555zm25.688-.024c2.22 0 3.955 1.245 4.062 3.484l.005.22v5.135h-1.93V38.73h-.07c-.464.707-1.205 1.31-2.55 1.31-1.758 0-3.326-1.154-3.326-2.947 0-1.964 1.948-3.016 3.86-3.016.875 0 1.603.265 1.994.468l.091.05v-.137c-.016-1.103-1.068-1.723-2.102-1.723-.688 0-1.345.207-1.74.83l-.087.151-1.774-.741c.62-1.412 2.12-2.05 3.567-2.05zm-30.953-4.532v13.394h-2.001V26.393h2.001zm18.546 0c2.215 0 4.395 1.604 4.395 4.16 0 2.48-2.053 4.063-4.2 4.154l-.195.004H110.6v5.076h-1.999V26.393h4.79zm7.495 0v13.394h-1.998V26.393h1.998zm-43.57 6.351c-1.382 0-2.572 1.122-2.572 2.761 0 1.624 1.19 2.764 2.572 2.764 1.38 0 2.57-1.14 2.57-2.764 0-1.639-1.19-2.76-2.57-2.76zm-9.979 0c-1.38 0-2.572 1.122-2.572 2.761 0 1.624 1.191 2.764 2.572 2.764s2.572-1.14 2.572-2.764c0-1.639-1.19-2.76-2.572-2.76zm19.931 0c-1.381 0-2.537 1.174-2.537 2.78 0 1.586 1.156 2.745 2.537 2.745 1.364 0 2.434-1.159 2.434-2.745 0-1.606-1.07-2.78-2.434-2.78zm38.84 2.953c-.982 0-2.119.397-2.119 1.43 0 .81.913 1.138 1.568 1.138 1.155 0 2.223-.88 2.377-2.119-.533-.258-.948-.449-1.826-.449zm-25.928-2.987c-.979 0-2.326.83-2.383 2.459v.2l4.075-1.692c-.225-.57-.898-.967-1.692-.967zm-65.05-7.233c1.53.868 3.069 1.724 4.604 2.585.475.265.844.61.865 1.173-.017.452-.23.77-.554 1.008a6.669 6.669 0 0 1-.764.466c-1.55.857-3.105 1.707-4.652 2.57-.21.115-.332.11-.505-.068a342.285 342.285 0 0 0-3.33-3.388c-.163-.163-.167-.253 0-.417a566.28 566.28 0 0 0 3.884-3.867c.152-.152.261-.169.451-.062zm78.313 2.78h-2.844v4.591h2.844c1.494 0 2.342-1.258 2.342-2.296 0-1.057-.848-2.296-2.342-2.296zM16.552 15.293c.329-.002.56.092.783.219 5.503 3.083 11.005 6.167 16.512 9.245.253.14.247.22.052.412a621.393 621.393 0 0 0-3.672 3.653c-.131.132-.212.208-.389.028-4.377-4.465-8.762-8.923-13.145-13.383-.036-.038-.067-.082-.141-.174zM80.825 15c.934 0 1.717.325 2.353.978.634.652.951 1.445.951 2.38 0 .94-.316 1.733-.947 2.382-.632.65-1.417.975-2.357.975-.94 0-1.725-.324-2.356-.975-.632-.649-.947-1.443-.947-2.382 0-.94.315-1.735.947-2.384.63-.65 1.416-.974 2.356-.974zM51.96 15c.46 0 .9.09 1.319.269.419.18.754.419 1.006.717l-.566.566c-.425-.508-1.011-.763-1.76-.763-.676 0-1.261.238-1.755.714-.494.477-.74 1.094-.74 1.854s.246 1.378.74 1.854a2.44 2.44 0 0 0 1.756.714c.718 0 1.316-.24 1.796-.718.31-.312.49-.745.537-1.302H51.96v-.773h3.115c.03.169.045.33.045.486 0 .898-.266 1.612-.799 2.146-.605.634-1.393.951-2.361.951-.928 0-1.718-.321-2.366-.965-.65-.643-.974-1.441-.974-2.393 0-.952.324-1.75.974-2.393.648-.643 1.438-.964 2.366-.964zm8.098.143v.79h-2.927v2.038h2.639v.772h-2.639v2.038h2.927v.79h-3.753v-6.428h3.753zm26.234 0l3.125 5h.036l-.036-1.238v-3.762h.827v6.429h-.863l-3.268-5.244h-.036l.036 1.24v4.004h-.826v-6.429h1.005zm-11.473 0v.79h-1.795v5.639h-.826v-5.64h-1.796v-.789h4.417zm-5.459 0v6.429h-.826v-6.429h.826zm-4.022 0v.79h-1.796v5.639h-.826v-5.64H60.92v-.789h4.419zm15.486.646c-.689 0-1.27.241-1.746.724-.475.48-.714 1.097-.714 1.845 0 .747.239 1.362.714 1.845a2.358 2.358 0 0 0 1.746.722c.688 0 1.27-.24 1.746-.722.476-.483.715-1.098.715-1.845 0-.748-.239-1.364-.715-1.845a2.36 2.36 0 0 0-1.746-.724z"></path></svg></a></div><div class="col col-xs-6 col-sm-6 col-md-6 col-lg-6"><a href="https://apps.apple.com/cz/app/můj-t-mobile/id1386652007" class="app-button" target="_blank"><svg viewBox="0 0 208 60" color="currentColor"><path d="M63.862 30.402c2.651 0 4.4 2.095 4.4 5.333 0 3.245-1.738 5.332-4.36 5.332-1.49 0-2.67-.666-3.287-1.828h-.05v5.174H58.42V30.51h2.076v1.738h.04c.596-1.12 1.867-1.846 3.326-1.846zm11.498 0c2.652 0 4.398 2.095 4.398 5.333 0 3.245-1.736 5.332-4.359 5.332-1.488 0-2.67-.666-3.286-1.828h-.05v5.174h-2.145V30.51h2.076v1.738h.04c.596-1.12 1.866-1.846 3.326-1.846zm15.395-4.012c3.027 0 5.103 1.698 5.172 4.17h-2.164c-.13-1.43-1.312-2.293-3.038-2.293-1.729 0-2.91.873-2.91 2.144 0 1.013.754 1.61 2.602 2.066l1.578.387c2.94.696 4.162 1.876 4.162 3.973 0 2.68-2.136 4.359-5.532 4.359-3.177 0-5.323-1.64-5.462-4.231h2.196c.158 1.421 1.54 2.353 3.424 2.353 1.809 0 3.109-.932 3.109-2.214 0-1.112-.785-1.778-2.641-2.234l-1.858-.447c-2.63-.636-3.853-1.866-3.853-3.863 0-2.472 2.156-4.17 5.215-4.17zm35.485 3.992c2.89 0 4.708 1.986 4.708 5.153v.735h-7.38v.13c0 1.787 1.124 2.958 2.812 2.958 1.19 0 2.125-.566 2.412-1.47h2.036c-.289 1.898-2.135 3.198-4.498 3.198-3.04 0-4.926-2.035-4.926-5.302 0-3.277 1.897-5.402 4.836-5.402zm-17.364 0c3.029 0 4.956 2.065 4.956 5.353 0 3.295-1.917 5.351-4.956 5.351-3.038 0-4.955-2.056-4.955-5.351 0-3.288 1.936-5.353 4.955-5.353zm-8.092-2.344v2.472h1.987v1.698h-1.987v5.76c0 .895.398 1.311 1.271 1.311.218 0 .567-.03.705-.05v1.689c-.237.06-.714.099-1.19.099-2.115 0-2.94-.795-2.94-2.82v-5.989h-1.52V30.51h1.519v-2.472h2.154zm-48.868-1.41l5.173 14.329h-2.353l-1.31-3.872h-5.462l-1.312 3.872H44.34l5.174-14.329h2.403zm68.29 3.774c.309 0 .566.04.736.08v2.005c-.17-.07-.547-.13-.964-.13-1.38 0-2.234.935-2.234 2.404v6.196H115.6V30.51h2.046v1.778h.05c.327-1.181 1.28-1.886 2.512-1.886zm-89.188-8.509l.29.02c.81.023 3.118.32 4.607 2.489-.122.072-2.749 1.617-2.72 4.791.032 3.806 3.328 5.062 3.368 5.076-.02.088-.516 1.815-1.751 3.568-1.033 1.544-2.115 3.053-3.832 3.08-1.669.039-2.23-.982-4.144-.982-1.931 0-2.53.955-4.13 1.02-1.636.062-2.885-1.647-3.955-3.177-2.137-3.122-3.802-8.8-1.57-12.663 1.08-1.895 3.054-3.116 5.16-3.148 1.638-.035 3.158 1.105 4.164 1.105.889 0 2.5-1.104 4.225-1.176l.288-.003zm77.858 10.255c-1.738 0-2.77 1.341-2.77 3.587 0 2.263 1.032 3.583 2.77 3.583 1.737 0 2.77-1.32 2.77-3.583 0-2.255-1.033-3.587-2.77-3.587zm-45.58.081c-1.638 0-2.74 1.42-2.74 3.506 0 2.104 1.102 3.514 2.74 3.514 1.668 0 2.762-1.38 2.762-3.514 0-2.115-1.094-3.506-2.761-3.506zm11.499 0c-1.639 0-2.74 1.42-2.74 3.506 0 2.104 1.101 3.514 2.74 3.514 1.667 0 2.76-1.38 2.76-3.514 0-2.115-1.093-3.506-2.76-3.506zm-24.07-3.217h-.06l-2.135 6.285h4.329l-2.135-6.285zm75.515 3.108c-1.48 0-2.551 1.073-2.66 2.651h5.222c-.05-1.6-1.072-2.651-2.562-2.651zM55.16 17.432c1.513 0 2.45 1.021 2.45 2.696 0 1.684-.932 2.7-2.45 2.7-1.521 0-2.451-1.016-2.451-2.7 0-1.675.934-2.696 2.452-2.696zm22.543 0c1.513 0 2.449 1.021 2.449 2.696 0 1.684-.931 2.7-2.449 2.7-1.521 0-2.451-1.016-2.451-2.7 0-1.675.934-2.696 2.451-2.696zm20.784 0c1.512 0 2.448 1.021 2.448 2.696 0 1.684-.931 2.7-2.448 2.7-1.521 0-2.452-1.016-2.452-2.7 0-1.675.935-2.696 2.452-2.696zm24.75 0c1.446 0 2.319.988 2.319 2.62v.357h-3.67v.058c.035.91.565 1.488 1.384 1.488.622 0 1.047-.225 1.237-.63h.986c-.233.932-1.063 1.504-2.25 1.504-1.49 0-2.4-1.021-2.4-2.683 0-1.66.93-2.714 2.395-2.714zm-31.445-1.928v7.224h-.982v-.821h-.082c-.31.569-.916.907-1.631.907-1.322 0-2.157-1.04-2.157-2.686 0-1.642.845-2.682 2.157-2.682.711 0 1.311.34 1.593.912h.077v-2.854h1.025zm-8.236 1.928c1.302 0 2.036.649 2.036 1.746v3.55h-.986v-.73h-.082c-.31.52-.877.816-1.56.816-1.002 0-1.732-.606-1.732-1.556 0-.934.696-1.474 1.933-1.55l1.406-.081v-.449c0-.548-.362-.858-1.063-.858-.572 0-.969.21-1.083.577h-.992c.105-.892.944-1.465 2.123-1.465zm28.961-1.193v1.317h1.126v.864h-1.126v2.671c0 .545.225.784.735.784.158 0 .248-.01.391-.025v.854a3.302 3.302 0 0 1-.558.053c-1.14 0-1.593-.401-1.593-1.403V18.42h-.825v-.864h.825v-1.317h1.025zm-7.592 1.193c1.16 0 1.799.696 1.799 1.933v3.363h-1.026v-3.106c0-.835-.362-1.25-1.121-1.25s-1.24.506-1.24 1.316v3.04h-1.025v-5.195h.986v.825h.076c.253-.577.769-.926 1.551-.926zm-56.664-1.589c2.042 0 3.24 1.255 3.24 3.422 0 2.199-1.189 3.463-3.24 3.463h-2.487v-6.885h2.487zm25.566-.339v7.224H72.8v-7.224h1.026zm-4.459 1.928c1.16 0 1.799.696 1.799 1.933v3.363H70.14v-3.106c0-.835-.362-1.25-1.121-1.25-.758 0-1.24.506-1.24 1.316v3.04h-1.025v-5.195h.986v.825h.076c.253-.577.769-.926 1.551-.926zm-9.978.1l.93 3.965h.077l1.068-3.964h.983l1.069 3.964h.08l.927-3.964h1.026l-1.427 5.195h-1.064l-1.073-3.827h-.082l-1.069 3.827h-1.053l-1.433-5.195h1.04zm56.67-2.028v2.863h.082c.251-.582.8-.93 1.584-.93 1.106 0 1.79.701 1.79 1.937v3.354h-1.028v-3.101c0-.83-.386-1.25-1.11-1.25-.84 0-1.31.53-1.31 1.317v3.034h-1.024v-7.224h1.017zM84.572 20.38l-1.268.081c-.715.049-1.04.292-1.04.75 0 .467.405.74.963.74.773 0 1.345-.492 1.345-1.136v-.435zm13.916-2.036c-.892 0-1.393.658-1.393 1.784 0 1.135.5 1.79 1.393 1.79.887 0 1.393-.66 1.393-1.79 0-1.126-.506-1.784-1.393-1.784zm-43.326 0c-.892 0-1.393.658-1.393 1.784 0 1.135.5 1.79 1.393 1.79.887 0 1.394-.66 1.394-1.79 0-1.126-.507-1.784-1.394-1.784zm22.542 0c-.891 0-1.392.658-1.392 1.784 0 1.135.5 1.79 1.392 1.79.888 0 1.394-.66 1.394-1.79 0-1.126-.506-1.784-1.394-1.784zm11.684.023c-.863 0-1.388.668-1.388 1.76 0 1.103.52 1.766 1.388 1.766.865 0 1.399-.673 1.399-1.76 0-1.083-.54-1.766-1.399-1.766zm-41.245-1.55h-1.298v4.938h1.298c1.44 0 2.27-.897 2.27-2.477 0-1.555-.844-2.462-2.27-2.462zm-16.813-.986c.163 1.487-.426 2.951-1.286 4.028-.898 1.06-2.336 1.87-3.735 1.765-.183-1.43.526-2.95 1.32-3.878.897-1.053 2.455-1.86 3.701-1.915zm91.903 2.474c-.758 0-1.288.535-1.345 1.346h2.625c-.025-.816-.52-1.346-1.28-1.346z"></path></svg></a></div></div><div class="social-links"><h6>FIND US ON SOCIAL MEDIA</h6><ul class="list-inline"><li><a href="https://www.facebook.com/TmobileCz/" class="ico-facebook-square" target="_blank"><span class="sr-only">Facebook</span></a></li><li><a href="https://www.instagram.com/tmobile_cze/" class="ico-instagram-square" target="_blank"><span class="sr-only">Instagram</span></a></li><li><a href="http://www.youtube.com/user/tmobilecz" class="ico-youtube-square" target="_blank"><span class="sr-only">Youtube</span></a></li><li><a href="https://twitter.com/TMobile_CZE" class="ico-twitter-square" target="_blank"><span class="sr-only">Twitter</span></a></li><li><a href="http://www.charger.cz/" class="ico-charger-square" target="_blank"><span class="sr-only">Charger</span></a></li></ul></div></div></div><div class="footer-divider"></div><div class="footer-secondary-navigation"><ul class="footer-navigation-list"><li><a href="https://www.t-mobile.cz/microsites/udrzitelnost/index.html">UDRŽITELNOST</a></li><li><a href="https://www.t-mobile.cz/kariera">KARIÉRA</a></li><li><a href="https://www.t-mobile.cz/ochrana-udaju/zpracovani-cookies">NASTAVENÍ COOKIES</a></li><li><a href="https://www.t-mobile.cz/ochrana-udaju">OCHRANA OSOBNÍCH ÚDAJŮ</a></li><li><a href="https://www.t-mobile.cz/certifikovani-partneri-t-mobile">CERTIFIKOVANÍ PARTNEŘI</a></li><li><a href="https://t-mobile.cz/sitemap.xml">MAPA STRÁNEK</a></li></ul></div><div class="row"><div class="col-xs-12 col-sm-12"><p class="legal-statement">Podle zákona o evidenci tržeb je prodávající povinen vystavit kupujícímu účtenku. Zároveň je povinen zaevidovat přijatou tržbu u správce daně on-line; v případě technického výpadku pak nejpozději do 48 hodin. <span style="font-size: 13px;margin: 0 5px;">&#9679;</span> Formuláře nám chrání reCAPTCHA, na kterou se vztahují Google <a href="https://policies.google.com/privacy?hl=cs" target="_blank">Zásady ochrany osobních údajů</a> a <a href="https://policies.google.com/terms?hl=cs" target="_blank">Smluvní podmínky</a>.</p><div class="row-copy-docs"><div><p class="copyright">&copy; 2004-2022 T-Mobile Czech Republic a.s.</p></div><div><a href="https://www.t-mobile.cz/podpora/ke-stazeni">Podmínky a dokumenty</a></div></div></div></div></div></div>
+
+<!-- Status:Footer-portlet:OK -->
+
+	
+	
+
+					
+				
+			
+		
+	
+	
+
+
+
+	</div>
+
+				</div>
+
+				
+			
+		
+	
+
+				
+				
+			
+
+		
+
+	
+
+
+
+
+
+		
+	</div>
+
+
+
+
+
+	<!--	/FOOTER PORTLET	-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+				<script src="https://static2.t-mobile.cz/lwe-eshop-portlet/js/vuejs/stores/portletStore.js?browserId=other&amp;minifierType=js&amp;languageId=cs_CZ&amp;b=6201&amp;t=1670414834000" type="text/javascript"></script>
+
+	
+
+				<script src="https://static2.t-mobile.cz/lwe-eshop-portlet/js/minicart.js?browserId=other&amp;minifierType=js&amp;languageId=cs_CZ&amp;b=6201&amp;t=1670414834000" type="text/javascript"></script>
+
+	
+
+				<script src="https://static2.t-mobile.cz/vcc/js/rvcc.js?browserId=other&amp;minifierType=js&amp;languageId=cs_CZ&amp;b=6201&amp;t=1670414820000" type="text/javascript"></script>
+
+	
+
+				<script src="https://static2.t-mobile.cz/vcc/js/ajaxUI.js?browserId=other&amp;minifierType=js&amp;languageId=cs_CZ&amp;b=6201&amp;t=1670414820000" type="text/javascript"></script>
+
+	
+
+				<script src="https://static2.t-mobile.cz/article2-portlet/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=cs_CZ&amp;b=6201&amp;t=1670444521000" type="text/javascript"></script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+// <![CDATA[
+
+	Liferay.Util.addInputFocus();
+
+	
+
+	
+		
+		
+
+			
+
+			
+		
+	
+
+// ]]>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+// <![CDATA[
+
+			Liferay.Portlet.onLoad(
+				{
+					canEditTitle: false,
+					columnPos: 0,
+					isStatic: 'end',
+					namespacedId: 'p_p_id_rvccnavigationm_WAR_vcc_',
+					portletId: 'rvccnavigationm_WAR_vcc',
+					refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d63079223\x26p_p_id\x3drvccnavigationm_WAR_vcc\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26MONITORING-ID\x3d7d31a01a-834e-4286-a04c-c3297e59222e\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fmuj-t-mobile'
+				}
+			);
+		
+			Liferay.Portlet.onLoad(
+				{
+					canEditTitle: false,
+					columnPos: 0,
+					isStatic: 'end',
+					namespacedId: 'p_p_id_searchsmallcorporateportlet_WAR_searchcorporateportlet_INSTANCE_0g0budeGj6ON_',
+					portletId: 'searchsmallcorporateportlet_WAR_searchcorporateportlet_INSTANCE_0g0budeGj6ON',
+					refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d63079223\x26p_p_id\x3dsearchsmallcorporateportlet_WAR_searchcorporateportlet_INSTANCE_0g0budeGj6ON\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26MONITORING-ID\x3d7d31a01a-834e-4286-a04c-c3297e59222e\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fmuj-t-mobile'
+				}
+			);
+		
+			Liferay.Portlet.onLoad(
+				{
+					canEditTitle: false,
+					columnPos: 0,
+					isStatic: 'end',
+					namespacedId: 'p_p_id_rcorevccm_WAR_vcc_',
+					portletId: 'rcorevccm_WAR_vcc',
+					refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d63079223\x26p_p_id\x3drcorevccm_WAR_vcc\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dcolumn-2\x26p_p_col_pos\x3d0\x26p_p_col_count\x3d2\x26MONITORING-ID\x3d7d31a01a-834e-4286-a04c-c3297e59222e\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fmuj-t-mobile'
+				}
+			);
+		
+			Liferay.Portlet.onLoad(
+				{
+					canEditTitle: false,
+					columnPos: 0,
+					isStatic: 'end',
+					namespacedId: 'p_p_id_welcomeportlet_WAR_navigationportlet_',
+					portletId: 'welcomeportlet_WAR_navigationportlet',
+					refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d63079223\x26p_p_id\x3dwelcomeportlet_WAR_navigationportlet\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26MONITORING-ID\x3d7d31a01a-834e-4286-a04c-c3297e59222e\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fmuj-t-mobile'
+				}
+			);
+		
+			Liferay.Portlet.onLoad(
+				{
+					canEditTitle: false,
+					columnPos: 0,
+					isStatic: 'end',
+					namespacedId: 'p_p_id_rvcclanguage_WAR_vcc_',
+					portletId: 'rvcclanguage_WAR_vcc',
+					refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d63079223\x26p_p_id\x3drvcclanguage_WAR_vcc\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26MONITORING-ID\x3d7d31a01a-834e-4286-a04c-c3297e59222e\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fmuj-t-mobile'
+				}
+			);
+		
+			Liferay.Portlet.onLoad(
+				{
+					canEditTitle: false,
+					columnPos: 1,
+					isStatic: 'end',
+					namespacedId: 'p_p_id_1_WAR_article2portlet_INSTANCE_mXhPR3mmyjrZ_',
+					portletId: '1_WAR_article2portlet_INSTANCE_mXhPR3mmyjrZ',
+					refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d63079223\x26p_p_id\x3d1_WAR_article2portlet_INSTANCE_mXhPR3mmyjrZ\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dcolumn-2\x26p_p_col_pos\x3d1\x26p_p_col_count\x3d2\x26MONITORING-ID\x3d7d31a01a-834e-4286-a04c-c3297e59222e\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fmuj-t-mobile'
+				}
+			);
+		
+			Liferay.Portlet.onLoad(
+				{
+					canEditTitle: false,
+					columnPos: 0,
+					isStatic: 'end',
+					namespacedId: 'p_p_id_lweminicart_WAR_lweeshopportlet_',
+					portletId: 'lweminicart_WAR_lweeshopportlet',
+					refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d63079223\x26p_p_id\x3dlweminicart_WAR_lweeshopportlet\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26MONITORING-ID\x3d7d31a01a-834e-4286-a04c-c3297e59222e\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fmuj-t-mobile'
+				}
+			);
+		
+			Liferay.Portlet.onLoad(
+				{
+					canEditTitle: false,
+					columnPos: 0,
+					isStatic: 'end',
+					namespacedId: 'p_p_id_footerportlet_WAR_navigationportlet_',
+					portletId: 'footerportlet_WAR_navigationportlet',
+					refreshURL: '\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d63079223\x26p_p_id\x3dfooterportlet_WAR_navigationportlet\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26MONITORING-ID\x3d7d31a01a-834e-4286-a04c-c3297e59222e\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fmuj-t-mobile'
+				}
+			);
+		AUI().use('aui-base', 'liferay-menu', 'liferay-notice', 'liferay-poller', function(A) {(function() {
+	Liferay.Util.addInputType();
+
+	Liferay.Portlet.ready(
+		function(portletId, node) {
+			Liferay.Util.addInputType(node);
+		}
+	);
+
+	if (A.UA.mobile) {
+		Liferay.Util.addInputCancel();
+	}
+})();(function() {
+	new Liferay.Menu();
+
+	var liferayNotices = Liferay.Data.notices;
+
+	for (var i = 1; i < liferayNotices.length; i++) {
+		new Liferay.Notice(liferayNotices[i]);
+	}
+
+	
+})();});
+// ]]>
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://static2.t-mobile.cz/tmcz-theme/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=cs_CZ&amp;b=6201&amp;t=1670414802000" type="text/javascript"></script>
+
+
+
+	
+
+	
+
+	<script type="text/javascript">
+		// <![CDATA[
+			
+
+			
+		// ]]>
+	</script>
+
+
+
+
+
+
+<script type="text/javascript">
+	document.cookie = 'AJAXIBLE_JAVASCRIPT_ENABLED=true';
+</script>
+
+
+<!-- bottom-ext.jsp  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			    <script type="text/javascript">
+                if(is_tmcz_authenticated == true) {
+                               dataLayer.push({'user.LoggedIn':'yes'});
+                }
+</script>		  
+
+			    <!--<script id="lead-api-js" type="text/javascript" src="https://www.t-mobile.cz/dcpublic/lead-api-init.js"></script>-->
+<!-- <script type="text/javascript" src="https://cdn.t-mobile.cz/lead-collector-legacy/lead-api.min.js"></script> -->		  
+
+			    <script type="text/javascript">
+$('.nav-login form').submit(function(){
+dataLayer.push(
+{event:"mtm.login",form:"formSent",formType:"standard",formUrl:document.URL,product:"Zelený pruh"}
+)
+});
+</script>		  
+
+
+
+
+<script src="https&#x3a;&#x2f;&#x2f;static2&#x2e;t-mobile&#x2e;cz&#x2f;tmcz-theme&#x2f;js&#x2f;main-child&#x2e;js&#x3f;browserId&#x3d;other&#x26;minifierType&#x3d;js&#x26;languageId&#x3d;cs_CZ&#x26;b&#x3d;6201&#x26;t&#x3d;1670414802000"></script>
+</body>
+
+</html>
+
